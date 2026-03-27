@@ -1,0 +1,2901 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hymn PPT Maker</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.4.5/build/opensheetmusicdisplay.min.js" integrity="sha256-6gCVkfTMk/vV431iszn/B3dUYJCaQO+o82xEAFERB9U=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js" integrity="sha256-Zh6NZwjzefLXtkIYJygkBuwIxUhZjOPgxKHvlGPo688=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css" integrity="sha256-xlp3XbXCVlcKYMpXDnziC1QzN9j0SQiDjRiZ0qu6IOc=" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs/dist/pptxgen.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@claviska/jquery-minicolors@2.3.6/jquery.minicolors.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@claviska/jquery-minicolors@2.3.6/jquery.minicolors.css">
+
+    <script>
+        $(document).ready(function() {
+            $('.minicolors').each(function() {
+                $(this).minicolors({
+                    control: $(this).attr('data-control') || 'hue',
+                    defaultValue: $(this).attr('data-defaultValue') || '',
+                    format: $(this).attr('data-format') || 'hex',
+                    keywords: $(this).attr('data-keywords') || '',
+                    inline: $(this).attr('data-inline') === 'true',
+                    letterCase: $(this).attr('data-letterCase') || 'lowercase',
+                    opacity: $(this).attr('data-opacity'),
+                    position: $(this).attr('data-position') || 'bottom',
+                    swatches: $(this).attr('data-swatches') ? $(this).attr('data-swatches').split('|') : [],
+                    change: function(value, opacity) {
+                        if (!value) return;
+                        if (opacity) value += ', ' + opacity;
+                    },
+                    theme: 'bootstrap'
+                });
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'ChosunKm';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
+            font-weight: normal; font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal; font-style: normal;
+        }
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal; font-style: normal;
+        }
+        @font-face {
+            font-family: 'ChosunBg';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff') format('woff');
+            font-weight: normal; font-style: normal;
+        }
+        @font-face {
+            font-family: 'KoPubWorldDotum';
+            font-weight: 700; font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/kopus/KoPubWorldDotumBold.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/kopus/KoPubWorldDotumBold.woff') format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'GmarketSansLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: normal; font-style: normal;
+        }
+        @font-face {
+            font-family: 'GyeonggiTitleM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+            font-weight: normal; font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy400';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperlogy500';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.woff) format("woff");
+        }
+        @font-face {
+            font-family: 'NanumGothic';
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumGothic/NanumGothic.woff) format("woff");
+        }
+        @font-face {
+            font-family: 'NanumMyeongjo';
+            src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumMyeongjo/NanumMyeongjo.woff) format("woff");
+        }
+
+        .ui, .segment { font-family: "GmarketSansLight"; }
+        svg, text, .musicSheet { background-color: transparent; }
+        #output { font-size: 28px; }
+        g text { font-size: 28px; }
+
+        .verseMsg {
+            font-size: 16pt;
+            background-color: transparent;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .musicSheet {
+            width: 1024px;
+            height: auto;
+            border: 1px solid #040404;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+        }
+        #createCanvas {
+            width: 100vw;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        svg[id^="osmdSvgPage"] { margin-top: 10px; }
+        .outlineText { background: #FFFFFF; }
+        .ui .table { height: 190px; }
+        .active.ui.button { background-color: #999999; }
+        .ui.selection.dropdown { padding: 10px; }
+        .minicolors {
+            padding: 0 0.5em;
+            border: 0;
+            height: 38px;
+            width: 100%;
+            border-radius: 20px;
+        }
+        .minicolors input:focus { border: 0; outline: none; }
+        .actionRow .ui.button,
+        .actionRow .ui.dropdown .button {
+            font-family: "GmarketSansMedium";
+        }
+        .actionRow .ui.button,
+        .actionRow .ui.dropdown.button {
+            min-height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .actionRow .actionOptionCheckbox {
+            display: inline-flex;
+            align-items: center;
+            min-height: 42px;
+            padding: 0 12px;
+            border: 1px solid rgba(34, 36, 38, 0.15);
+            border-radius: 0.28571429rem;
+            background: #fff7ef;
+        }
+        .actionRow .actionOptionCheckbox label {
+            font-family: "GmarketSansMedium";
+            color: #b35b00;
+            font-size: 14px;
+        }
+        #batchStatusPanel {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            width: 320px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: rgba(20, 27, 38, 0.92);
+            color: #ffffff;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+            z-index: 1200;
+            display: none;
+            backdrop-filter: blur(8px);
+        }
+        #batchStatusPanel .statusLabel {
+            font-size: 12px;
+            color: #9fb7d8;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        #batchStatusPanel .statusPrimary {
+            font-size: 19px;
+            line-height: 1.35;
+            font-family: "GmarketSansMedium";
+            margin-bottom: 4px;
+        }
+        #batchStatusPanel .statusSecondary {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #d4deea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="batchStatusPanel">
+        <div class="statusLabel">Batch Progress</div>
+        <div id="batchStatusPrimary" class="statusPrimary"></div>
+        <div id="batchStatusSecondary" class="statusSecondary"></div>
+    </div>
+
+    <div class="ui container raised segments">
+        <div class="ui dimmer">
+            <div id="dimmerMsg" class="ui indeterminate massive text loader">PPT파일 생성중...</div>
+        </div>
+        <div class="ui attached orange segment">
+            <div class="ui top attached gray label">
+                <div class="ui grid">
+                    <div class="ten wide column">
+                        <div class="ui header">
+                            <i class="music icon"></i>
+                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 14:04 KST)
+                        </div>
+                    </div>
+                    <div class="right aligned six wide column">
+                        <a href="https://ccmhymn.github.io/hymnXmlViewer/" target="_blank">
+                            <i class="linkify icon"></i>관련링크
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <div class="ui">
+                        <select id="hymnLists" class="ui fluid search selection dropdown">
+                            <option>-- 장/제목 검색 --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui grid segment">
+                <div class="ten wide column">
+                    <h4 class="ui dividing blue header">옵션</h4>
+                    <div class="ui equal width grid">
+                        <div class="row">
+                            <div class="column">
+                                <select id="LyricsFontface" onchange="getSetValues()" class="ui fluid selection dropdown">
+                                    <option value="Paperlogy400">페이퍼로지(400)</option>
+                                    <option value="Paperlogy500">페이퍼로지(500)</option>
+                                    <option value="GmarketSansBold">G마켓 산스(볼드)</option>
+                                    <option value="GmarketSansMedium" selected>G마켓 산스(미디움)</option>
+                                    <option value="ChosunKm">조선굵은명조</option>
+                                    <option value="ChosunBg">조선고딕</option>
+                                    <option value="NanumBarunGothic">나눔바른고딕</option>
+                                    <option value="NanumGothic">나눔고딕</option>
+                                    <option value="NanumMyeongjo">나눔명조</option>
+                                    <option value="KoPubWorldDotum">Ko Pub 돋움체</option>
+                                    <option value="GyeonggiTitleM">경기천년제목</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="ui labeled input">
+                                    <div class="ui label">폰트크기</div>
+                                    <input id="LyricsFontSize" type="number" value='28' min='10' max='50' step='1' onchange="handleFontSizeInputChange()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="ui labeled input">
+                                    <div class="ui label">줌 설정</div>
+                                    <input id="zoomSize" type="number" value='1.3' min='0.5' max='5' step='0.01' onchange="handleZoomInputChange()" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="ui tiny button basic fluid" id="toggleAdvancedOptions" style="margin-bottom:8px;">
+                                    세부 편집 펼치기
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row advanced-option" style="display:none;">
+                            <div class="column">
+                                <div class="ui labeled input" style="width:100%;">
+                                    <div class="ui label">줄바꿈 마디</div>
+                                    <input id="lineBreakMeasures" type="text" placeholder="예: 4,8,12 (비우면 기본)" style="width:100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row advanced-option" style="display:none;">
+                            <div class="column">
+                                <div class="ui labeled input" style="width:100%;">
+                                    <div class="ui label" style="white-space:nowrap;">마디 분리</div>
+                                    <input id="splitMeasures" type="text" placeholder="예: 5:1  (5번 마디를 1번째 음표 뒤에서 분리)" style="width:100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="measureMapRow" style="display:none;">
+                            <div class="column">
+                                <div style="font-size:11px;color:#555;margin-bottom:3px;">
+                                    마디 맵 <span style="color:#aaa;font-size:10px;">클릭 = 줄바꿈 추가/제거 &nbsp;|&nbsp; 초록 = 현재 적용됨</span>
+                                </div>
+                                <div id="measureMap" style="display:flex;flex-wrap:wrap;max-height:68px;overflow-y:auto;padding:2px 0;"></div>
+                            </div>
+                        </div>
+                        <div class="row" id="lyricSearchRow" style="display:none;">
+                            <div class="column">
+                                <div class="ui action input" style="width:100%;">
+                                    <div class="ui label">가사 검색</div>
+                                    <input id="lyricSearchInput" type="text" placeholder="음절 입력 (예: 복, 하)" style="width:100%;">
+                                    <button class="ui teal button" onclick="searchLyricMeasures()"><i class="search icon"></i></button>
+                                </div>
+                                <div id="lyricSearchResults" style="margin-top:6px; min-height:28px;"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <div class="ui labeled input">
+                                    <input type="text" id="color-picker" class="ui large transparent fluid input minicolors"
+                                        data-swatches="#FFFFFF|#FFA500|#FFFF00|#00FF00|#0000FF|#000080|#800080|#964B00|#FFC0CB|#808080|#C0C0C0|#FFD700|#000000|#FF0000"
+                                        value="#FFFFFF" style="min-width:120px;text-transform: uppercase;">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="large ui right labeled input">
+                                    <label class="ui label primary basic button" for="input-img"><i class="image icon"></i>배경</label>
+                                    <input type="file" id="input-img" accept=".gif, .jpg, .jpeg, .png" style="display:none;">
+                                    <div class="ui label secondary basic button btn-delete">삭제</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="verseSelectorRow" style="display:none;">
+                            <div class="column">
+                                <div class="ui small label">포함할 절 선택</div>
+                                <div id="verseSelector" class="ui tiny buttons" style="margin-top:6px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="six wide column">
+                    <h4 class="ui dividing blue header">배경미리보기</h4>
+                    <table class="ui table" style="border: 1px solid;">
+                        <tr>
+                            <td class="bottom aligned outlineText" id="preview"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui bottom attached gray segment actionRow">
+            <div class="ui stackable grid">
+                <div class="eleven wide column">
+                    <div style="display:inline-flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <button class="ui blue button" onclick="makePPTX()"><i class="file powerpoint icon"></i>PPT 다운</button>
+                        <button class="ui orange button" onclick="makePNGZip({ includeTabs: $('#exportIncludeTabs').is(':checked') })"><i class="image icon"></i>PNG(zip) 다운</button>
+                        <div class="ui checkbox actionOptionCheckbox" style="margin:0;">
+                            <input type="checkbox" id="exportIncludeTabs" checked>
+                            <label for="exportIncludeTabs" style="white-space:nowrap;">절 표시</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="right aligned middle aligned five wide column">
+                    <div style="display:inline-flex; align-items:center; justify-content:flex-end; gap:8px; flex-wrap:nowrap; white-space:nowrap; height:42px;">
+                        <button class="ui green button" onclick="reCall()" style="white-space:nowrap;"><i class="sync alternate icon"></i>다시 적용</button>
+                        <div class="ui floating dropdown violet button" id="moreActionsMenu" style="white-space:nowrap;">
+                            <i class="sliders horizontal icon"></i>
+                            <span class="text">고급 옵션</span>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" onclick="clearStoredBreaks()"><i class="eraser icon"></i>현재 곡 줄바꿈 삭제</div>
+                                <div class="item" onclick="exportBreaksJson()"><i class="file code icon"></i>JSON 내보내기</div>
+                                <div class="item" onclick="makeAllPptZip()"><i class="archive icon"></i>645장 PPT 일괄(zip) 다운</div>
+                                <div class="item" onclick="makeAllPngZip()"><i class="file archive outline icon"></i>645장 PNG 일괄(zip) 다운</div>
+                                <div class="item" onclick="event.stopPropagation();">
+                                    <div style="font-size:12px;color:#666;margin-bottom:8px;">
+                                        범위 다운로드
+                                    </div>
+                                    <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;">
+                                        <input id="batchRangeStart" type="number" min="1" max="645" value="1" style="width:72px;" />
+                                        <span style="color:#888;">~</span>
+                                        <input id="batchRangeEnd" type="number" min="1" max="645" value="100" style="width:72px;" />
+                                    </div>
+                                    <div style="display:flex;gap:6px;margin-top:8px;">
+                                        <button class="ui tiny blue button" onclick="event.stopPropagation(); makeRangePptZip();">PPT</button>
+                                        <button class="ui tiny orange button" onclick="event.stopPropagation(); makeRangePngZip();">PNG</button>
+                                    </div>
+                                </div>
+                                <div class="item" onclick="setInitialize()"><i class="undo icon"></i>화면 초기화</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="file-content" style="display:none;"></div>
+    <div id="output" style="width:100%; text-align:center;"></div>
+    <div id="createCanvas" style="width:100%; height:100%; text-align:center"></div>
+
+    <script src="./js/hymnArray.js"></script>
+
+    <script>
+
+        // ─── 앱 상태 ────────────────────────────────────────────────
+        var appState = {
+            titleText: '',
+            doubleBarMeasureNum: 0,
+            isOnlyOne: false,
+            countLyrics: 0,
+            lyricsAllArray: [],
+            isPass: "none",
+            fontFamilyName: "GmarketSansMedium",
+            zoomSize: 1.3,
+            currentXmlData: null,
+            hymnBreaksData: {},
+            currentHymnNum: '',
+            showMeasureNumbers: true,
+            zoomLocked: false,
+            fontSizeLocked: false,
+            exportHideMeasureNumbers: false,
+            renderCycleId: 0,
+            isAutoStabilizing: false,
+            suppressAutoStabilize: false
+        };
+        var hymnBreaksReady = null;
+
+        // ─── 색상 피커 미리보기 ───────────────────────────────────────
+        $("#color-picker").on("propertychange change keyup paste input", function() {
+            $("#preview").css('backgroundColor', $(this).val());
+        });
+
+        // ─── UI 초기화 ────────────────────────────────────────────────
+        $(document).ready(function() {
+            $('.ui.form').form();
+            $('select.dropdown').dropdown();
+            $('.ui.dropdown').dropdown({ fullTextSearch: true });
+            $('.ui.checkbox').checkbox();
+            fontSetting();
+            $('#moreActionsMenu').dropdown({ action: 'hide' });
+
+            // 줄바꿈 입력창 변경 시 마디 맵 + 가사검색 칩 색상 동기화
+            $("#lineBreakMeasures").on('input change', function() {
+                syncMapWithBreaks();
+                $("#lyricSearchResults [data-measure]").each(function() {
+                    updateChipStyle($(this), parseInt($(this).attr('data-measure')));
+                });
+            });
+
+            $("#toggleAdvancedOptions").on('click', function() {
+                $(".advanced-option").toggle();
+                $(this).text($(".advanced-option:visible").length ? "세부 편집 접기" : "세부 편집 펼치기");
+            });
+        });
+
+        // ─── hymnBreaks.json 로드 ────────────────────────────────────
+        hymnBreaksReady = loadHymnBreaksData();
+
+        // ─── 찬송가 목록 드롭다운 채우기 ─────────────────────────────
+        $.each(hymnArrays, function(index, item) {
+            var option = $("<option>" + item.title + "</option>");
+            option.val(item.number);
+            $('#hymnLists').append(option);
+        });
+
+        // ─── 찬송 선택 이벤트 ─────────────────────────────────────────
+        $("#hymnLists").on('change', async function() {
+            setIniValue();
+            await loadHymn(this.value);
+        });
+
+        // ─── 폰트 적용 ───────────────────────────────────────────────
+        function fontSetting() {
+            appState.fontFamilyName = $("#LyricsFontface").val();
+            var fontSize = parseFloat($("#LyricsFontSize").val()) || 28;
+            $("svg, text, #output, .musicSheet, .verseMsg, .showLyrics").css("font-family", appState.fontFamilyName);
+            $("svg text, g text, .showLyrics, .verseMsg, #output").css("font-family", appState.fontFamilyName);
+            $("svg text, g text, #output").css("font-size", fontSize + "px");
+            applySvgTextStyles();
+        }
+
+        function applySvgTextStyles() {
+            var fontSize = parseFloat($("#LyricsFontSize").val()) || 28;
+            $("#createCanvas svg text").each(function() {
+                this.style.fontFamily = appState.fontFamilyName;
+                this.style.fontSize = fontSize + "px";
+                this.setAttribute("font-family", appState.fontFamilyName);
+                this.setAttribute("font-size", fontSize);
+            });
+            applyHymnSpecificLyricAdjustments();
+        }
+
+        function applyHymnSpecificLyricAdjustments() {
+            if (appState.currentHymnNum !== "636") return;
+
+            $("#createCanvas svg text").each(function() {
+                var text = (this.textContent || '').trim();
+                if (!/^\d+\./.test(text)) return;
+                var verseMatch = text.match(/^(\d+)\./);
+                var verseNum = verseMatch ? parseInt(verseMatch[1], 10) : 0;
+                var shiftX = 0;
+
+                if (verseNum === 4) shiftX = 34;
+                else if (verseNum >= 1 && verseNum <= 3) shiftX = 8;
+                else shiftX = 0;
+
+                if (!shiftX) return;
+
+                var x = parseFloat(this.getAttribute("x"));
+                if (!isNaN(x)) {
+                    this.setAttribute("x", Math.max(0, x - shiftX));
+                }
+
+                // 636장은 4절 시작 가사가 특히 길어서 더 크게 이동하고,
+                // 1-3절은 아주 조금만 보정한다.
+                this.style.transformBox = "fill-box";
+                this.style.transformOrigin = "left center";
+                this.style.transform = "translateX(-" + shiftX + "px)";
+            });
+        }
+
+        async function applyRenderedStylesAfterLayout() {
+            await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+            await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+            applySvgTextStyles();
+            hideEndingMarkingsInRenderedScore();
+        }
+
+        function hideEndingMarkingsInRenderedScore(root) {
+            var scope = root || document;
+            Array.from(scope.querySelectorAll('#createCanvas svg *, svg *')).forEach(function(node) {
+                var cls = (node.getAttribute && node.getAttribute('class')) || '';
+                var id = (node.getAttribute && node.getAttribute('id')) || '';
+                var combined = (cls + ' ' + id).toLowerCase();
+                if (combined.indexOf('volta') !== -1 || combined.indexOf('ending') !== -1) {
+                    hideSvgNode(node);
+                }
+            });
+
+            Array.from(scope.querySelectorAll('#createCanvas svg text, #createCanvas svg tspan, svg text, svg tspan')).forEach(function(node) {
+                var text = (node.textContent || '').trim();
+                if (!/^\d+(\s*,\s*\d+)*$/.test(text)) return;
+
+                var y = parseFloat(node.getAttribute && node.getAttribute('y'));
+                var x = parseFloat(node.getAttribute && node.getAttribute('x'));
+                if (!isNaN(y) && y <= 30 && !isNaN(x) && x <= 220) {
+                    var ownerText = node.closest ? node.closest('text') : null;
+                    if (ownerText) hideSvgNode(ownerText);
+                    var ownerGroup = node.closest ? node.closest('g') : null;
+                    if (ownerGroup) hideSvgNode(ownerGroup);
+                }
+            });
+        }
+
+        function getSetValues() {
+            appState.zoomSize = parseFloat($("#zoomSize").val());
+            fontSetting();
+        }
+
+        function handleZoomInputChange() {
+            appState.zoomLocked = true;
+            getSetValues();
+        }
+
+        function handleFontSizeInputChange() {
+            appState.fontSizeLocked = true;
+            getSetValues();
+        }
+
+        function getSelectedExportQuality(mode) {
+            return 'high';
+        }
+
+        function applyHymnDefaultLayout(hymnNum) {
+            var zoomOverrides = {
+                "009": 1.2
+            };
+            var fontSizeOverrides = {
+                "636": 22
+            };
+
+            var overrideZoom = zoomOverrides[hymnNum];
+            var overrideFontSize = fontSizeOverrides[hymnNum];
+
+            if (typeof overrideFontSize === 'number' && !appState.fontSizeLocked) {
+                var currentFontSize = parseFloat($("#LyricsFontSize").val());
+                if (isNaN(currentFontSize)) currentFontSize = 28;
+                if (Math.abs(currentFontSize - 28) < 0.001) {
+                    $("#LyricsFontSize").val(String(overrideFontSize));
+                }
+            }
+
+            if (typeof overrideZoom === 'number' && !appState.zoomLocked) {
+                var currentZoom = parseFloat($("#zoomSize").val());
+                if (isNaN(currentZoom)) currentZoom = 1.3;
+
+                // 사용자가 직접 조정한 줌은 유지하고, 기본값(1.3)일 때만 곡별 기본 줌을 적용
+                if (Math.abs(currentZoom - 1.3) < 0.001) {
+                    $("#zoomSize").val(overrideZoom.toFixed(2));
+                    appState.zoomLocked = true;
+                }
+            }
+
+            getSetValues();
+        }
+
+        // ─── 초기화 (찬송 선택 시) ────────────────────────────────────
+        function setIniValue() {
+            appState.renderCycleId += 1;
+            appState.titleText = "";
+            appState.countLyrics = 0;
+            appState.isOnlyOne = false;
+            appState.lyricsAllArray = [];
+            appState.isPass = "none";
+            appState.doubleBarMeasureNum = 0;
+
+            $("#createCanvas").empty();
+            $("#output").empty();
+            $("#verseSelector").empty();
+            $("#verseSelectorRow").hide();
+            $("#lineBreakMeasures").val('');
+            $("#splitMeasures").val('');
+            $("#lyricSearchInput").val('');
+            $("#lyricSearchResults").empty();
+            $("#lyricSearchRow").hide();
+            $("#measureMap").empty();
+            $("#measureMapRow").hide();
+            appState.currentXmlData = null;
+            appState.currentHymnNum = '';
+            if (!appState.zoomLocked) $("#zoomSize").val('1.3');
+            if (!appState.fontSizeLocked) $("#LyricsFontSize").val('28');
+            getSetValues();
+        }
+
+        // ─── Reset 버튼 ───────────────────────────────────────────────
+        function setInitialize() {
+            $('#LyricsFontSize').val('28');
+            $("#zoomSize").val('1.3');
+            appState.zoomLocked = false;
+            appState.fontSizeLocked = false;
+            $('#LyricsFontface').dropdown('restore defaults');
+            $('#hymnLists').dropdown('clear');
+            $('#hymnLists').dropdown('restore defaults');
+            $("#lineBreakMeasures").val('');
+            $("#splitMeasures").val('');
+            $("#createCanvas").empty();
+            $(".musicSheet").empty();
+            $("#output").empty();
+            $("#verseSelector").empty();
+            $("#verseSelectorRow").hide();
+            $("#lyricSearchInput").val('');
+            $("#lyricSearchResults").empty();
+            $("#lyricSearchRow").hide();
+            $("#measureMap").empty();
+            $("#measureMapRow").hide();
+            $("#color-picker").val('#FFFFFF');
+            $("#color-picker").trigger('keyup');
+            $("#preview").css('backgroundColor', '#FFFFFF');
+            $("#preview").css('backgroundImage', 'none');
+            $("#file-content").empty();
+            appState.currentXmlData = null;
+            appState.currentHymnNum = '';
+            appState.lyricsAllArray = [];
+            appState.countLyrics = 0;
+            appState.isOnlyOne = false;
+            appState.isPass = "none";
+            appState.doubleBarMeasureNum = 0;
+            appState.titleText = "";
+            fontSetting();
+        }
+
+        // ─── 다시적용 버튼 ────────────────────────────────────────────
+        async function reCall() {
+            var file            = $("#hymnLists").val();
+            var savedLineBreaks = $("#lineBreakMeasures").val(); // 사용자 줄바꿈 보존
+            var savedSplits     = $("#splitMeasures").val();     // 마디 분리 보존
+            var savedFontFace   = $("#LyricsFontface").val();
+            var savedFontSize   = $("#LyricsFontSize").val();
+            var savedFontLocked = appState.fontSizeLocked;
+            var savedZoom       = $("#zoomSize").val();
+            var savedZoomLocked = appState.zoomLocked;
+            saveBreakToStorage(appState.currentHymnNum);         // localStorage 저장
+            setIniValue();
+            $('#LyricsFontface').dropdown('set selected', savedFontFace || 'GmarketSansMedium');
+            $("#LyricsFontSize").val(savedFontSize || '28');
+            $("#zoomSize").val(savedZoom || '1.3');
+            getSetValues();
+            appState.fontSizeLocked = savedFontLocked;
+            appState.zoomLocked = savedZoomLocked;
+            $("#lineBreakMeasures").val(savedLineBreaks);        // 복원
+            $("#splitMeasures").val(savedSplits);                // 복원
+            await loadHymn(file);
+        }
+
+        // ─── 절 선택 UI ───────────────────────────────────────────────
+        function buildVerseSelector(total) {
+            var $sel = $("#verseSelector").empty();
+            for (var i = 1; i <= total; i++) {
+                $sel.append('<button class="ui tiny toggle button active verse-btn" data-verse="' + i + '">' + i + '절</button>');
+            }
+            $("#verseSelectorRow").show();
+            $(".verse-btn").on("click", function() {
+                $(this).toggleClass("active");
+                rerenderSelectedVerses();
+            });
+        }
+
+        function getSelectedVerses() {
+            var selected = [];
+            $(".verse-btn.active").each(function() {
+                selected.push(parseInt($(this).data("verse")));
+            });
+            return selected;
+        }
+
+        async function rerenderSelectedVerses() {
+            if (!appState.currentXmlData || !appState.countLyrics) return;
+
+            $("#createCanvas").empty();
+            var resultDataArray = [];
+            for (var j = 0; j < appState.countLyrics; j++) {
+                resultDataArray.push(appState.currentXmlData.cloneNode(true));
+            }
+            await waitForFontsReady();
+            await renderData(resultDataArray);
+        }
+
+        // ─── Enter 키로 가사 검색 ─────────────────────────────────────
+        $(document).on('keydown', '#lyricSearchInput', function(e) {
+            if (e.key === 'Enter') searchLyricMeasures();
+        });
+
+        // ─── 가사 음절로 마디 번호 찾기 ──────────────────────────────
+        function findMeasuresByLyric(xmlData, searchText) {
+            var results = [];
+            var seen    = {};
+            Array.from(xmlData.getElementsByTagName('measure')).forEach(function(measure) {
+                var num = measure.getAttribute('number');
+                if (seen[num]) return;
+                Array.from(measure.getElementsByTagName('lyric')).forEach(function(lyric) {
+                    var textEl = lyric.getElementsByTagName('text')[0];
+                    if (textEl && textEl.textContent.includes(searchText)) {
+                        if (!seen[num]) { seen[num] = true; results.push(parseInt(num)); }
+                    }
+                });
+            });
+            return results.sort(function(a, b) { return a - b; });
+        }
+
+        // ─── 검색 실행 → 결과 칩 렌더링 ─────────────────────────────
+        function searchLyricMeasures() {
+            var text = $("#lyricSearchInput").val().trim();
+            var $results = $("#lyricSearchResults").empty();
+
+            if (!text) { $results.append('<span style="color:#999;font-size:12px;">검색어를 입력하세요</span>'); return; }
+            if (!appState.currentXmlData) { $results.append('<span style="color:#999;font-size:12px;">찬송을 먼저 선택하세요</span>'); return; }
+
+            var found = findMeasuresByLyric(appState.currentXmlData, text);
+
+            if (!found.length) {
+                $results.append('<span style="color:#c00;font-size:12px;">"' + text + '" 를 찾을 수 없습니다</span>');
+                return;
+            }
+
+            found.forEach(function(num) {
+                var $chip = $('<span>')
+                    .addClass('ui tiny label')
+                    .css({ cursor: 'pointer', margin: '2px', userSelect: 'none' })
+                    .attr('data-measure', num)
+                    .text(num + '마디');
+                updateChipStyle($chip, num);
+                $chip.on('click', function() {
+                    toggleMeasureInBreaks(num);
+                    updateChipStyle($(this), num);
+                });
+                $results.append($chip);
+            });
+
+            $results.prepend(
+                '<span style="color:#555;font-size:11px;margin-right:6px;">' +
+                '"' + text + '" → ' + found.length + '곳 발견 / 클릭하면 줄바꿈에 추가·제거</span><br/>'
+            );
+        }
+
+        // ─── 칩 색상: 줄바꿈 목록에 포함 여부 반영 ──────────────────
+        function updateChipStyle($chip, num) {
+            var current = getCurrentBreakList();
+            if (current.includes(num)) {
+                $chip.css({ backgroundColor: '#21ba45', color: '#fff' }); // 초록 = 추가됨
+            } else {
+                $chip.css({ backgroundColor: '#e0e1e2', color: '#333' }); // 회색 = 미추가
+            }
+        }
+
+        function getCurrentBreakList() {
+            return $("#lineBreakMeasures").val().split(',')
+                .map(function(s) { return parseInt(s.trim()); })
+                .filter(function(n) { return !isNaN(n) && n > 0; });
+        }
+
+        // ─── 줄바꿈 목록에 마디 추가/제거 (토글) ────────────────────
+        function toggleMeasureInBreaks(num) {
+            var list = getCurrentBreakList();
+            var idx  = list.indexOf(num);
+            if (idx === -1) { list.push(num); }
+            else            { list.splice(idx, 1); }
+            list.sort(function(a, b) { return a - b; });
+            $("#lineBreakMeasures").val(list.length ? list.join(', ') : '');
+        }
+
+        // ─── 줄바꿈 자동 감지 ─────────────────────────────────────────
+        function detectAndFillLineBreaks(xmlData) {
+            var seen   = {};
+            var breaks = [];
+            Array.from(xmlData.getElementsByTagName('print')).forEach(function(el) {
+                if (el.getAttribute('new-system') === 'yes') {
+                    var num = el.parentNode && el.parentNode.getAttribute('number');
+                    if (num && !seen[num]) {
+                        seen[num] = true;
+                        breaks.push(parseInt(num));
+                    }
+                }
+            });
+            breaks.sort(function(a, b) { return a - b; });
+            $("#lineBreakMeasures").val(breaks.join(', '));
+        }
+
+        // ─── JSON 줄바꿈 적용 ────────────────────────────────────────
+        function getBreakOverride(hymnNum) {
+            try { return localStorage.getItem('hymnBreak_' + hymnNum); } catch(e) { return null; }
+        }
+
+        function saveBreakToStorage(hymnNum) {
+            if (!hymnNum) return;
+            var val = $("#lineBreakMeasures").val().trim();
+            try {
+                if (val) localStorage.setItem('hymnBreak_' + hymnNum, val);
+                else     localStorage.removeItem('hymnBreak_' + hymnNum);
+            } catch(e) {}
+        }
+
+        async function clearStoredBreaks() {
+            var hymnNum = appState.currentHymnNum;
+            if (!hymnNum) {
+                alert("먼저 찬송을 선택하세요.");
+                return;
+            }
+
+            try {
+                localStorage.removeItem('hymnBreak_' + hymnNum);
+            } catch (e) {}
+
+            $("#lineBreakMeasures").val('');
+            $("#splitMeasures").val('');
+            $("#lyricSearchResults").empty();
+            syncMapWithBreaks();
+
+            await reCall();
+        }
+
+        function applyJsonBreaks(hymnNum) {
+            var entry = appState.hymnBreaksData[hymnNum];
+
+            // JSON의 splits 자동 적용 (수동으로 이미 입력된 경우 유지)
+            if (!$("#splitMeasures").val().trim() && entry && entry.splits) {
+                $("#splitMeasures").val(entry.splits);
+            }
+
+            // 1) localStorage 사용자 오버라이드 우선
+            var override = getBreakOverride(hymnNum);
+            if (override !== null) {
+                $("#lineBreakMeasures").val(override);
+                return;
+            }
+            // 2) JSON 데이터 (breaks=[] 이면 splits가 breaks 역할 → 비워도 됨)
+            if (entry) {
+                if (entry.breaks && entry.breaks.length) {
+                    $("#lineBreakMeasures").val(entry.breaks.join(', '));
+                }
+                // entry가 존재하면 폴백 건너뜀 (splits이 처리)
+                return;
+            }
+            // 3) 폴백: XML 기존 print 태그 감지
+            if (appState.currentXmlData) detectAndFillLineBreaks(appState.currentXmlData);
+        }
+
+        // ─── 마디 맵 UI ──────────────────────────────────────────────
+        function buildMeasureMap(xmlData) {
+            var $map = $("#measureMap").empty();
+            var seen = {}, nums = [];
+            Array.from(xmlData.getElementsByTagName('measure')).forEach(function(m) {
+                var n = parseInt(m.getAttribute('number'));
+                if (!isNaN(n) && !seen[n]) { seen[n] = true; nums.push(n); }
+            });
+            nums.sort(function(a, b) { return a - b; });
+
+            nums.forEach(function(num) {
+                var $chip = $('<span>')
+                    .addClass('map-chip')
+                    .css({
+                        display: 'inline-block', padding: '1px 5px', margin: '1px 2px',
+                        borderRadius: '3px', fontSize: '11px', cursor: 'pointer',
+                        userSelect: 'none', border: '1px solid #ccc',
+                        minWidth: '20px', textAlign: 'center', lineHeight: '18px'
+                    })
+                    .attr('data-measure', num)
+                    .text(num);
+                updateMapChipStyle($chip, num);
+                $chip.on('click', function() {
+                    toggleMeasureInBreaks(num);
+                    syncMapWithBreaks();
+                    $("#lyricSearchResults [data-measure='" + num + "']").each(function() {
+                        updateChipStyle($(this), num);
+                    });
+                });
+                $map.append($chip);
+            });
+
+            $("#measureMapRow").show();
+        }
+
+        function syncMapWithBreaks() {
+            $("#measureMap .map-chip").each(function() {
+                updateMapChipStyle($(this), parseInt($(this).attr('data-measure')));
+            });
+        }
+
+        function updateMapChipStyle($chip, num) {
+            var current = getCurrentBreakList();
+            if (current.includes(num)) {
+                $chip.css({ backgroundColor: '#21ba45', color: '#fff', borderColor: '#16ab39' });
+            } else {
+                $chip.css({ backgroundColor: '#f8f8f8', color: '#555', borderColor: '#ccc' });
+            }
+        }
+
+        // ─── JSON 내보내기 ───────────────────────────────────────────
+        function exportBreaksJson() {
+            var result = JSON.parse(JSON.stringify(appState.hymnBreaksData));
+            try {
+                for (var i = 0; i < localStorage.length; i++) {
+                    var key = localStorage.key(i);
+                    if (!key || !key.startsWith('hymnBreak_')) continue;
+                    var hymnNum = key.replace('hymnBreak_', '');
+                    var breaks  = localStorage.getItem(key).split(',')
+                        .map(function(s) { return parseInt(s.trim()); })
+                        .filter(function(n) { return !isNaN(n) && n > 0; });
+                    if (result[hymnNum]) { result[hymnNum].breaks = breaks; result[hymnNum].source = 'manual'; }
+                    else                { result[hymnNum] = { breaks: breaks, source: 'manual' }; }
+                }
+            } catch(e) {}
+            var blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+            var a    = document.createElement('a');
+            a.href   = URL.createObjectURL(blob);
+            a.download = 'hymnBreaks.json';
+            a.click();
+        }
+
+        // ─── TXT 기반 줄바꿈 자동 계산 ───────────────────────────────
+        // TXT 파싱: 빈 줄로 나눠 절 배열 반환
+        function parseTxtVerses(content) {
+            var blocks = content.split(/\n\s*\n/);
+            var verses = [];
+            blocks.forEach(function(block) {
+                var lines = block.split('\n')
+                    .map(function(l) { return l.trim(); })
+                    .filter(function(l) { return l.length > 0; });
+                if (lines.length) verses.push(lines);
+            });
+            return verses;
+        }
+
+        // 줄에서 절 번호·후렴 마커 제거, 한국어 음절만 배열로
+        function extractSyllables(line) {
+            var clean = line
+                .replace(/^\(\d+\)\s*/, '')
+                .replace(/^후렴\s*[:\.]?\s*/i, '')
+                .replace(/[-]/g, '')
+                .replace(/\s/g, '');
+            var result = [];
+            for (var i = 0; i < clean.length; i++) {
+                var code = clean.charCodeAt(i);
+                if (code >= 0xAC00 && code <= 0xD7A3) result.push(clean[i]);
+            }
+            return result;
+        }
+
+        // 긴 줄(>maxSyl 음절)을 단어 경계에서 반으로 분리
+        function splitLongLine(line, maxSyl) {
+            if (extractSyllables(line).length <= maxSyl) return [line];
+
+            var clean = line.replace(/^\(\d+\)\s*/, '').replace(/^후렴\s*[:\.]?\s*/i, '').replace(/-/g, '');
+            var words = clean.trim().split(/\s+/).filter(function(w) { return w.length; });
+            if (words.length <= 1) return [line];
+
+            var mid = Math.ceil(extractSyllables(line).length / 2);
+            var cumLen = 0, bestIdx = Math.floor(words.length / 2), bestDist = Infinity;
+            for (var i = 0; i < words.length - 1; i++) {
+                cumLen += words[i].length;
+                var dist = Math.abs(cumLen - mid);
+                if (dist < bestDist) { bestDist = dist; bestIdx = i + 1; }
+            }
+            return [
+                words.slice(0, bestIdx).join(' '),
+                words.slice(bestIdx).join(' ')
+            ];
+        }
+
+        // XML에서 해당 절 음표(lyric 있는 것) 배열 반환
+        // → { syllable, measureNum, noteIdxInMeasure(ALL-notes 0-based) }
+        function getNotesForVerse(xmlData, verseNum, isOnlyOneVerse) {
+            var result = [];
+            Array.from(xmlData.getElementsByTagName('measure')).forEach(function(m) {
+                var mNum = parseInt(m.getAttribute('number'));
+                var allNotes = Array.from(m.getElementsByTagName('note'));
+                allNotes.forEach(function(n, idx) {
+                    if (n.getElementsByTagName('chord').length) return;
+                    if (n.getElementsByTagName('rest').length)  return;
+                    var lyricEls = Array.from(n.getElementsByTagName('lyric'));
+                    var lyric = null;
+                    if (isOnlyOneVerse) {
+                        lyric = lyricEls[0] || null;
+                    } else {
+                        for (var k = 0; k < lyricEls.length; k++) {
+                            if (lyricEls[k].getAttribute('number') == String(verseNum)) {
+                                lyric = lyricEls[k]; break;
+                            }
+                        }
+                    }
+                    if (!lyric) return;
+                    var textEl = lyric.getElementsByTagName('text')[0];
+                    if (!textEl || !textEl.textContent.trim()) return;
+                    // "1.예", "2.수" 같이 절 번호 접두사 제거
+                    var syl = textEl.textContent.trim().replace(/^\d+\./, '');
+                    if (!syl) return;
+                    result.push({ syllable: syl, measureNum: mNum, noteIdxInMeasure: idx });
+                });
+            });
+            return result;
+        }
+
+        // TXT 서브줄 배열 → { splits: "3:3,5:3", breaks: [5,9] } 계산
+        function matchLinesToBreaks(notes, subLines) {
+            if (subLines.length <= 1 || !notes.length) return null;
+            var splitsList = [], breaksList = [], searchPos = 0;
+            var maxMeasure = notes.reduce(function(mx, n) { return Math.max(mx, n.measureNum); }, 0);
+
+            for (var li = 0; li < subLines.length - 1; li++) {
+                var syllables = subLines[li];
+                if (!syllables.length) continue;
+
+                // 순차 그리디 매칭 (부분 불일치 시 되감기)
+                var pos = searchPos, syllPos = 0, matchStart = -1;
+                while (pos < notes.length && syllPos < syllables.length) {
+                    if (notes[pos].syllable === syllables[syllPos]) {
+                        if (!syllPos) matchStart = pos;
+                        syllPos++;
+                    } else if (syllPos > 0) {
+                        pos = matchStart; syllPos = 0; matchStart = -1;
+                    }
+                    pos++;
+                }
+                if (syllPos < syllables.length) continue; // 매칭 실패
+
+                var lineEndPos  = pos - 1;
+                var lineEndNote = notes[lineEndPos];
+
+                // 다음 서브줄 첫 2음절 검색
+                var nextSyl = subLines[li + 1];
+                var nextPos = lineEndPos + 1;
+                if (nextSyl && nextSyl.length) {
+                    var pfxLen = Math.min(2, nextSyl.length);
+                    while (nextPos < notes.length) {
+                        var ok = true;
+                        for (var pi = 0; pi < pfxLen; pi++) {
+                            if (nextPos + pi >= notes.length || notes[nextPos + pi].syllable !== nextSyl[pi]) { ok = false; break; }
+                        }
+                        if (ok) break;
+                        nextPos++;
+                    }
+                }
+                searchPos = Math.min(nextPos, notes.length);
+
+                // 같은 마디에 뒤에 lyric 음표 있으면 split, 없으면 break
+                var hasMoreInMeasure = false;
+                for (var ni = lineEndPos + 1; ni < notes.length; ni++) {
+                    if (notes[ni].measureNum === lineEndNote.measureNum) { hasMoreInMeasure = true; break; }
+                    else break;
+                }
+
+                if (hasMoreInMeasure) {
+                    // 마디 중간 → split
+                    splitsList.push({ measure: lineEndNote.measureNum, keep: lineEndNote.noteIdxInMeasure + 1 });
+                } else {
+                    // 마디 끝 → break (NO_LYRIC 마디 건너뜀)
+                    var breakPos = lineEndNote.measureNum + 1;
+                    while (breakPos <= maxMeasure) {
+                        if (notes.some(function(n) { return n.measureNum === breakPos; })) break;
+                        breakPos++;
+                    }
+                    if (breakPos <= maxMeasure + 1) breaksList.push(breakPos);
+                }
+            }
+
+            if (!splitsList.length && !breaksList.length) return null;
+
+            // split으로 인한 마디 번호 이동 보정
+            splitsList.sort(function(a, b) { return b.measure - a.measure; });
+            var adjustedBreaks = breaksList.map(function(b) {
+                var offset = splitsList.filter(function(s) { return s.measure < b; }).length;
+                return b + offset;
+            });
+
+            return {
+                splits: splitsList.map(function(s) { return s.measure + ':' + s.keep; }).join(','),
+                breaks: adjustedBreaks
+            };
+        }
+
+        // TXT 파일 로드 → 서브줄 계산 → breaks 반환 (실패시 null)
+        async function computeTxtLineBreaks(xmlData, hymnNum) {
+            var txtContent = await fetchTextFile('./찬송가-가사TXT(업데이트)/' + hymnNum + '.txt');
+            if (!txtContent) return null;
+
+            var verses = parseTxtVerses(txtContent);
+            if (!verses.length || !verses[0].length) return null;
+            var firstVerseLines = verses[0].slice(); // 복사본
+
+            // ─── 후렴(Refrain) 처리 ───────────────────────────────────────────
+            // TXT에는 후렴이 1번만 표기되지만, XML 악보에는 각 절마다 후렴이 포함됨
+            // → 첫 절 뒤에 오는 후렴 블록을 firstVerseLines에 합쳐서 절 구조 완성
+            if (verses.length > 1) {
+                var nextBlock = verses[1];
+                if (nextBlock.length > 0 && /^후렴/i.test(nextBlock[0])) {
+                    firstVerseLines = firstVerseLines.concat(nextBlock);
+                }
+            }
+
+            var notes = getNotesForVerse(xmlData, 1, appState.isOnlyOne);
+            if (!notes.length) return null;
+
+            // ─── 1차 시도: TXT 줄을 그대로 서브줄로 사용 (분리 없음) ───────────
+            // TXT 가사 줄 = 악보 한 줄(stave)이 이상적 기준
+            var directSubLines = [];
+            firstVerseLines.forEach(function(line) {
+                var syls = extractSyllables(line);
+                if (syls.length) directSubLines.push(syls);
+            });
+
+            if (directSubLines.length > 1) {
+                var directResult = matchLinesToBreaks(notes, directSubLines);
+                if (directResult) {
+                    // stave 수가 예상에 충분히 가까우면 바로 사용
+                    var staveCount = (directResult.breaks ? directResult.breaks.length : 0)
+                                   + (directResult.splits ? directResult.splits.split(',').filter(Boolean).length : 0)
+                                   + 1;
+                    var entry          = appState.hymnBreaksData[hymnNum];
+                    var spv            = entry && entry.slides_per_verse ? entry.slides_per_verse : 2.0;
+                    var expectedStaves = Math.round(spv * 2);
+                    if (staveCount >= expectedStaves - 1) {
+                        return directResult;
+                    }
+                }
+            }
+
+            // ─── 2차 시도: 긴 줄 분리 후 재매칭 ─────────────────────────────────
+            // (TXT 줄 수 < 필요한 stave 수인 경우 — 예: 038장처럼 한 줄이 매우 긴 경우)
+            var entry2         = appState.hymnBreaksData[hymnNum];
+            var spv2           = entry2 && entry2.slides_per_verse ? entry2.slides_per_verse : 2.0;
+            var expectedStaves2 = Math.round(spv2 * 2);
+            var ratio           = expectedStaves2 / firstVerseLines.length;
+            var splitThreshold;
+            if      (ratio >= 1.8) { splitThreshold = 0;    }  // 전부 분리
+            else if (ratio >= 1.3) { splitThreshold = 12;   }  // 긴 줄만
+            else                   { splitThreshold = 9999; }  // 분리 안 함
+
+            var subLines = [];
+            firstVerseLines.forEach(function(line) {
+                splitLongLine(line, splitThreshold).forEach(function(part) {
+                    var syls = extractSyllables(part);
+                    if (syls.length) subLines.push(syls);
+                });
+            });
+            if (subLines.length <= 1) return null;
+
+            var splitResult = matchLinesToBreaks(notes, subLines);
+            if (!splitResult) return null;
+
+            // 2차 결과도 stave 수 검증 — 부족하면 null 반환 → JSON/XML 폴백
+            // (예: 072장처럼 TXT 줄 수 × 2 < expectedStaves인 경우)
+            var splitStaveCount = (splitResult.breaks ? splitResult.breaks.length : 0)
+                                + (splitResult.splits ? splitResult.splits.split(',').filter(Boolean).length : 0) + 1;
+            var entry3         = appState.hymnBreaksData[hymnNum];
+            var spv3           = entry3 && entry3.slides_per_verse ? entry3.slides_per_verse : 2.0;
+            var expectedStaves3 = Math.round(spv3 * 2);
+            if (splitStaveCount >= expectedStaves3 - 1) return splitResult;
+
+            return null; // TXT로 충분한 stave 확보 불가 → JSON 폴백
+        }
+
+        function getExpectedSystemCount(hymnNum, isLastVerse) {
+            var entry = appState.hymnBreaksData[hymnNum];
+            var spv   = (entry && entry.slides_per_verse) ? entry.slides_per_verse : 2.0;
+            var expectedSystems = Math.round(spv * 2);
+            return expectedSystems;
+        }
+
+        function getLastMeasureVerseLyricTail(xmlData, verseNum) {
+            if (!xmlData) return '';
+            var measures = Array.from(xmlData.getElementsByTagName('measure'));
+            if (!measures.length) return '';
+            var lastMeasure = measures[measures.length - 1];
+            return Array.from(lastMeasure.querySelectorAll('lyric[number="' + verseNum + '"] text'))
+                .map(function(node) { return (node.textContent || '').trim(); })
+                .filter(Boolean)
+                .join('');
+        }
+
+        function getConfiguredSystemCount(breakValue, splitValue) {
+            var breakCount = (breakValue || '').split(',')
+                .map(function(s) { return parseInt(s.trim()); })
+                .filter(function(n) { return !isNaN(n) && n > 0; }).length;
+            var splitCount = (splitValue || '').split(',')
+                .map(function(s) { return s.trim(); })
+                .filter(function(s) { return !!s; }).length;
+            return 1 + breakCount + splitCount;
+        }
+
+        // ─── 줄바꿈 결정 (우선순위: localStorage → TXT → JSON → XML) ─────
+        async function determineLineBreaks(xmlData, hymnNum) {
+            var expectedSystems = getExpectedSystemCount(hymnNum, false);
+            var txtResult = await computeTxtLineBreaks(xmlData, hymnNum);
+            var entry = appState.hymnBreaksData[hymnNum];
+
+            // 1) 사용자 localStorage 오버라이드
+            var override = getBreakOverride(hymnNum);
+            if (override !== null) {
+                var overrideSplits = $("#splitMeasures").val().trim() || (entry && entry.splits) || '';
+                var overrideSystems = getConfiguredSystemCount(override, overrideSplits);
+                if (overrideSystems >= expectedSystems - 1) {
+                    $("#lineBreakMeasures").val(override);
+                    if (!$("#splitMeasures").val().trim() && entry && entry.splits)
+                        $("#splitMeasures").val(entry.splits);
+                    return;
+                }
+            }
+
+            // 2) hymnBreaks.json 수동값 우선 적용
+            if (entry && entry.source === 'manual') {
+                if (!$("#splitMeasures").val().trim() && entry.splits)
+                    $("#splitMeasures").val(entry.splits);
+                if (entry.breaks && entry.breaks.length)
+                    $("#lineBreakMeasures").val(entry.breaks.join(', '));
+                return;
+            }
+
+            // 3) TXT 기반 자동 계산
+            if (txtResult) {
+                if (txtResult.splits && !$("#splitMeasures").val().trim())
+                    $("#splitMeasures").val(txtResult.splits);
+                if (txtResult.breaks && txtResult.breaks.length)
+                    $("#lineBreakMeasures").val(txtResult.breaks.join(', '));
+                return;
+            }
+
+            // 4) hymnBreaks.json 폴백
+            if (entry) {
+                var jsonSplits = $("#splitMeasures").val().trim() || entry.splits || '';
+                var jsonBreaks = (entry.breaks && entry.breaks.length) ? entry.breaks.join(', ') : '';
+                var jsonSystems = getConfiguredSystemCount(jsonBreaks, jsonSplits);
+                if (jsonSystems >= expectedSystems - 1 || !txtResult) {
+                    if (!$("#splitMeasures").val().trim() && entry.splits)
+                        $("#splitMeasures").val(entry.splits);
+                    if (entry.breaks && entry.breaks.length)
+                        $("#lineBreakMeasures").val(entry.breaks.join(', '));
+                    return;
+                }
+            }
+
+            // 5) XML print 태그 감지 최후 폴백
+            detectAndFillLineBreaks(xmlData);
+        }
+
+        // ─── 못갖춘 마디 분리: "5:1" → 5번 마디를 1번째 음표 뒤에서 분리 ──
+        function parseSplitInput(str) {
+            return str.split(',').map(function(s) {
+                var parts = s.trim().split(':');
+                return { measure: parseInt(parts[0]), keepCount: parseInt(parts[1]) };
+            }).filter(function(s) { return !isNaN(s.measure) && !isNaN(s.keepCount) && s.keepCount > 0; });
+        }
+
+        function doSplitMeasure(xmlData, measureNum, keepCount) {
+            var allMeasures = Array.from(xmlData.getElementsByTagName('measure'));
+            var targetMeasure = null;
+            allMeasures.forEach(function(m) {
+                if (m.getAttribute('number') === String(measureNum)) targetMeasure = m;
+            });
+            if (!targetMeasure) return xmlData;
+
+            var notes = Array.from(targetMeasure.getElementsByTagName('note'));
+            if (keepCount >= notes.length) return xmlData; // 분리 불가
+
+            // 분리 기준 note
+            var splitNote = notes[keepCount];
+
+            // measureNum 이후 마디 번호 모두 +1 (먼저 처리)
+            Array.from(xmlData.getElementsByTagName('measure')).forEach(function(m) {
+                var n = parseInt(m.getAttribute('number'));
+                if (!isNaN(n) && n > measureNum) m.setAttribute('number', String(n + 1));
+            });
+
+            // 새 마디 생성
+            var newMeasure = xmlData.createElement('measure');
+            newMeasure.setAttribute('number', String(measureNum + 1));
+            newMeasure.setAttribute('implicit', 'yes');
+
+            // new-system 줄바꿈 마커 추가
+            var printEl = xmlData.createElement('print');
+            printEl.setAttribute('new-system', 'yes');
+            newMeasure.appendChild(printEl);
+
+            // splitNote 이후 모든 노드를 새 마디로 이동
+            var inSecond = false;
+            var nodesToMove = [];
+            Array.from(targetMeasure.childNodes).forEach(function(node) {
+                if (node === splitNote) inSecond = true;
+                if (inSecond) nodesToMove.push(node);
+            });
+            nodesToMove.forEach(function(node) {
+                targetMeasure.removeChild(node);
+                newMeasure.appendChild(node);
+            });
+
+            // 원본 마디 바로 뒤에 삽입
+            targetMeasure.parentNode.insertBefore(newMeasure, targetMeasure.nextSibling);
+            return xmlData;
+        }
+
+        // 마디 분리 입력 파싱 후 적용 (뒤에서부터 처리해야 번호 충돌 없음)
+        function applySplitMeasures(xmlData) {
+            var input = $("#splitMeasures").val().trim();
+            if (!input) return xmlData;
+            var splits = parseSplitInput(input);
+            splits.sort(function(a, b) { return b.measure - a.measure; }); // 뒤부터
+            splits.forEach(function(s) { xmlData = doSplitMeasure(xmlData, s.measure, s.keepCount); });
+            return xmlData;
+        }
+
+        // 마디 분리로 인한 doubleBarMeasureNum 조정값 계산
+        function calcSplitOffset(originalNum) {
+            if (!originalNum) return originalNum;
+            var dbn = parseInt(originalNum);
+            var input = $("#splitMeasures").val().trim();
+            if (!input) return originalNum;
+            parseSplitInput(input).forEach(function(s) {
+                if (s.measure < dbn) dbn++;
+            });
+            return dbn;
+        }
+
+        // ─── 줄바꿈 적용 (XMLSerializer + DOMParser로 OSMD에 안전하게 전달) ──
+        function applyCustomLineBreaks(xmlData, verseNum) {
+            // 1) 못갖춘 마디 분리 먼저 처리
+            xmlData = applySplitMeasures(xmlData);
+
+            // 2) 기존 new-system / new-page 정리
+            Array.from(xmlData.getElementsByTagName('print')).forEach(function(el) {
+                if (el.getAttribute('new-page') === 'yes') {
+                    el.removeAttribute('new-page');
+                }
+                if (el.getAttribute('new-system') === 'yes') {
+                    var parentMeasure = el.parentNode;
+                    // implicit="yes" 마디는 doSplitMeasure가 만든 것 → 제거하지 않음
+                    if (parentMeasure && parentMeasure.getAttribute('implicit') === 'yes') return;
+                    el.parentNode.removeChild(el);
+                }
+            });
+
+            // 3) 줄바꿈 마디 삽입
+            var input = $("#lineBreakMeasures").val().trim();
+            if (input) {
+                var breakMeasures = input.split(',')
+                    .map(function(s) { return parseInt(s.trim()); })
+                    .filter(function(n) { return !isNaN(n) && n > 0; });
+
+                breakMeasures.forEach(function(measureNum) {
+                    Array.from(xmlData.getElementsByTagName('measure')).forEach(function(measure) {
+                        if (measure.getAttribute('number') === String(measureNum)) {
+                            var printEl = xmlData.createElement('print');
+                            printEl.setAttribute('new-system', 'yes');
+                            measure.insertBefore(printEl, measure.firstChild);
+                        }
+                    });
+                });
+            }
+
+            // 4) XMLSerializer → DOMParser 재파싱
+            var xmlStr = new XMLSerializer().serializeToString(xmlData);
+            var parsed = new DOMParser().parseFromString(xmlStr, 'application/xml');
+
+            // 파서 오류 감지 → 오류시 원본 반환
+            if (parsed.querySelector && parsed.querySelector('parsererror')) {
+                console.error('[hymnMaker] XML parseerror — 원본 데이터로 폴백');
+                return xmlData;
+            }
+            return parsed;
+        }
+
+        async function fetchXmlDocument(url) {
+            try {
+                var response = await fetch(url, { cache: 'no-store' });
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                var text = await response.text();
+                return new DOMParser().parseFromString(text, 'application/xml');
+            } catch (err) {
+                console.error('[hymnMaker] XML 로드 실패:', url, err);
+                return null;
+            }
+        }
+
+        async function fetchTextFile(url) {
+            try {
+                var response = await fetch(url, { cache: 'no-store' });
+                if (!response.ok) return null;
+                return await response.text();
+            } catch (err) {
+                return null;
+            }
+        }
+
+        async function loadHymnBreaksData() {
+            var data = await fetchTextFile('./js/hymnBreaks.json');
+            if (!data) {
+                console.warn('[hymnMaker] hymnBreaks.json 로드 실패 — 자동 줄바꿈 비활성화');
+                return;
+            }
+
+            try {
+                appState.hymnBreaksData = JSON.parse(data);
+            } catch (err) {
+                console.warn('[hymnMaker] hymnBreaks.json 파싱 실패 — 자동 줄바꿈 비활성화');
+            }
+        }
+
+        // ─── XML 로드 ─────────────────────────────────────────────────
+        async function loadHymn(hymnNum) {
+            if (!hymnNum || hymnNum === '-- 장/제목 검색 --') return;
+            if (hymnBreaksReady) await hymnBreaksReady;
+            appState.currentHymnNum = hymnNum;
+            applyHymnDefaultLayout(hymnNum);
+            var hymnUrl = './HymnXML/' + hymnNum + '.xml';
+            var data = await fetchXmlDocument(hymnUrl);
+            if (!data) {
+                alert("XML 파일 로드 오류: " + hymnUrl);
+                return;
+            }
+
+            appState.currentXmlData = data;
+            $("#lyricSearchRow").show();
+
+            var titleText = $(data).find("movement-title").first().text().trim();
+            if (!titleText) titleText = $(data).find("work-title").first().text().trim();
+            appState.titleText = titleText;
+            $("#output").html("<br/>" + appState.titleText);
+
+            var barstyle = $(data).find("bar-style:contains('light-light')");
+            appState.doubleBarMeasureNum = barstyle.parent().parent().attr("number");
+
+            var lyricAttrData  = $(data).find("lyric");
+            var lyricAttrMap   = {};
+            $(lyricAttrData).each(function(index, element) {
+                var num = $(element).attr("number");
+                if (num) lyricAttrMap[String(num)] = true;
+            });
+
+            appState.countLyrics = Object.keys(lyricAttrMap).length;
+            appState.isOnlyOne = false;
+            if (!appState.countLyrics) {
+                appState.isOnlyOne = true;
+                appState.countLyrics = 1;
+            }
+
+            appState.lyricsAllArray = [];
+            for (var i = 0; i < appState.countLyrics; i++) {
+                appState.lyricsAllArray.push(getLyricsText(i + 1, data));
+            }
+
+            var lastLyrics = appState.lyricsAllArray[appState.countLyrics - 1] || "";
+            var last2Char = lastLyrics.substr(-2);
+            appState.isPass = (last2Char !== "아멘" && barstyle.length > 0) ? "pass" : "none";
+
+            var resultDataArray = [];
+            for (var j = 0; j < appState.countLyrics; j++) {
+                resultDataArray.push(data.cloneNode(true));
+            }
+
+            buildVerseSelector(appState.countLyrics);
+
+            if (!$("#lineBreakMeasures").val().trim()) {
+                await determineLineBreaks(data, hymnNum);
+            }
+
+            buildMeasureMap(data);
+            await waitForFontsReady();
+            await renderData(resultDataArray);
+            if (!appState.suppressAutoStabilize) {
+                await stabilizeInitialRender(appState.renderCycleId);
+            }
+        }
+
+        // ─── 렌더링 데이터 준비 ───────────────────────────────────────
+        async function renderData(resultDataArray) {
+            var activeVerses = getSelectedVerses();
+            if (activeVerses.length === 0) {
+                activeVerses = Array.from({ length: appState.countLyrics }, function(_, i) { return i + 1; });
+            }
+
+            // 선택된 절마다 악보 컨테이너 생성
+            activeVerses.forEach(function(verse) {
+                var lyricsText = (appState.lyricsAllArray[verse - 1] || "").substring(0, 9);
+                $("#createCanvas").append(
+                    '<br/><div class="verseMsg"> &lt; ' + verse + '절 &gt; </div>' +
+                    '<div id="lyrics' + verse + '" class="showLyrics" style="display:block">' + lyricsText + '</div>' +
+                    '<div id="musicSheet' + verse + '" class="musicSheet"></div>'
+                );
+            });
+
+            fontSetting();
+
+            // 각 절 XML 가공 (해당 절 가사만 남기기)
+            var dataArray = [];
+            activeVerses.forEach(function(verse) {
+                var i = verse - 1;
+                dataArray.push(getData(resultDataArray[i], appState.countLyrics, verse));
+            });
+
+            // 순서대로 OSMD 렌더링
+            for (var idx = 0; idx < dataArray.length; idx++) {
+                await renderOSMD(dataArray[idx], activeVerses[idx]);
+            }
+
+            // OSMD가 새 SVG를 만든 뒤에도 현재 UI의 폰트/크기 설정을 다시 강제 적용
+            fontSetting();
+            await applyRenderedStylesAfterLayout();
+        }
+
+        // ─── OSMD 렌더링 ─────────────────────────────────────────────
+        async function renderOSMD(data, verseNum) {
+            var musicSheetId = "musicSheet" + verseNum;
+            var osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay(musicSheetId);
+
+            // 아멘(겹세로줄) 범위 설정 — 마디 분리 시 번호 보정
+            var activeVerses = getSelectedVerses();
+            if (activeVerses.length === 0) {
+                activeVerses = Array.from({ length: appState.countLyrics }, function(_, i) { return i + 1; });
+            }
+            var isLastVerse    = (verseNum === activeVerses[activeVerses.length - 1]);
+            var optDrawMeasure = Number.MAX_SAFE_INTEGER;
+            if (appState.doubleBarMeasureNum && !isLastVerse && !appState.isOnlyOne && appState.isPass !== "pass") {
+                optDrawMeasure = calcSplitOffset(appState.doubleBarMeasureNum); // 분리 보정 적용
+            }
+
+            try {
+                var _pageWidth = 297;
+
+                // 1) 옵션 먼저 설정 (newSystemFromXml + newSystemFromXML 둘 다)
+                osmd.setOptions({
+                    backend:                             "svg",
+                    pageFormat:                          _pageWidth + "x150",
+                    drawUpToMeasureNumber:               optDrawMeasure,
+                    defaultFontFamily:                   appState.fontFamilyName,
+                    defaultFontStyle:                    1,
+                    defaultColorTitle:                   "black",
+                    autoResize:                          false,
+                    autoBeam:                            false,
+                    darkMode:                            false,
+                    drawLyrics:                          true,
+                    drawTitle:                           false,
+                    drawSubtitle:                        false,
+                    drawComposer:                        false,
+                    drawLyricist:                        false,
+                    drawCredits:                         false,
+                    drawMetronomeMarks:                  false,
+                    drawPartNames:                       false,
+                    drawPartAbbreviations:               false,
+                    drawMeasureNumbers:                  appState.showMeasureNumbers,
+                    drawMeasureNumbersOnlyAtSystemStart: appState.showMeasureNumbers,
+                    drawTimeSignatures:                  true,
+                    drawFingerings:                      false,
+                    newSystemFromXml:                    true,   // OSMD 1.x
+                    newSystemFromXML:                    true,   // OSMD 일부 버전
+                    stretchLastSystemLine:               true,
+                });
+
+                // 2) 마디분리 + 줄바꿈 적용 후 load
+                var processedData = applyCustomLineBreaks(data, verseNum);
+                await osmd.load(processedData);
+
+                // 3) 예상 시스템 수 계산
+                var _entry = appState.hymnBreaksData[appState.currentHymnNum];
+                var _spv   = (_entry && _entry.slides_per_verse) ? _entry.slides_per_verse : 2.0;
+                var _expectedSystems = Math.round(_spv * 2);
+                // 4) 줌을 낮춰가며 render — 시스템 수가 예상치 이하가 될 때까지 재시도
+                // (zoom ↑ → 레이아웃 유효폭 ↓ → 자동 줄바꿈 증가, zoom ↓ → 유효폭 ↑ → 줄바꿈 감소)
+                var MAX_SPACING_ATTEMPTS = 6;
+                var _renderZoom = appState.zoomSize;
+                for (var _attempt = 0; _attempt < MAX_SPACING_ATTEMPTS; _attempt++) {
+                    osmd.zoom = _renderZoom;
+                    await osmd.render();
+
+                    // 전체 페이지의 총 시스템 수 합산
+                    var _pages = osmd.GraphicSheet && osmd.GraphicSheet.MusicPages;
+                    var _actualSystems = 0;
+                    if (_pages) { for (var _pi = 0; _pi < _pages.length; _pi++) { _actualSystems += _pages[_pi].MusicSystems.length; } }
+                    if (_actualSystems <= _expectedSystems || _attempt === MAX_SPACING_ATTEMPTS - 1) break;
+
+                    // zoom 8% 축소 (최소 0.7)
+                    _renderZoom = Math.max(0.7, _renderZoom * 0.92);
+                }
+                if (!appState.zoomLocked && verseNum === 1 && Math.abs(_renderZoom - appState.zoomSize) > 0.01) {
+                    $("#zoomSize").val(_renderZoom.toFixed(2));
+                    appState.zoomSize = _renderZoom;
+                }
+
+                // 5) slides_per_verse > 1인 경우 페이지 분배 조정
+                // 비교 기준 코드에서는 첫 페이지 시스템 수가 목표보다 많으면
+                // pageFormat 높이를 줄여 2줄/2줄처럼 더 균등하게 맞췄다.
+                var _pagesAfterZoom = osmd.GraphicSheet && osmd.GraphicSheet.MusicPages;
+                var _targetSPP = Math.round(_expectedSystems / _spv); // 페이지당 목표 시스템 수
+                if (_spv > 1 && _pagesAfterZoom && _pagesAfterZoom[0] && _pagesAfterZoom[0].MusicSystems.length > _targetSPP) {
+                    var _ph = 150;
+                    for (var _pdi = 0; _pdi < 8; _pdi++) {
+                        var _pg1Sys = _pagesAfterZoom[0] ? _pagesAfterZoom[0].MusicSystems.length : 0;
+                        if (_pg1Sys <= _targetSPP) break;
+                        _ph = Math.max(40, Math.round(_ph * 0.85));
+                        osmd.setOptions({ pageFormat: _pageWidth + "x" + _ph });
+                        await osmd.load(processedData);
+                        osmd.zoom = _renderZoom;
+                        await osmd.render();
+                        _pagesAfterZoom = osmd.GraphicSheet && osmd.GraphicSheet.MusicPages;
+                        if (!_pagesAfterZoom) break;
+                    }
+                }
+
+            } catch (err) {
+                console.error('[hymnMaker] renderOSMD 오류 (verse ' + verseNum + '):', err);
+                $("#musicSheet" + verseNum).html(
+                    '<p style="color:red;padding:8px;">렌더링 오류: ' + err.message + '</p>'
+                );
+            }
+        }
+
+        // ─── 가사 처리 ────────────────────────────────────────────────
+        function getData(cloneData, totalVerseResult, remainNum) {
+            if (totalVerseResult === 1) return cloneData;
+            var rtData = cloneData;
+            for (var i = 0; i < totalVerseResult; i++) {
+                (function(i) {
+                    rtData = removeVerse(i + 1, rtData, (i + 1) === remainNum);
+                })(i);
+            }
+            rtData = filterMeasuresByEnding(rtData, remainNum);
+            return rtData;
+        }
+
+        function removeVerse(num, rtData, isKeep) {
+            if (isKeep) return rtData;
+            $('lyric[number="' + num + '"]', rtData).each(function() { this.remove(); });
+            return rtData;
+        }
+
+        function getLyricsText(num, data) {
+            var selector  = appState.isOnlyOne ? 'lyric' : 'lyric[number="' + num + '"]';
+            var lyricsText = "";
+            $(selector, data).each(function() {
+                lyricsText += $(this).find('text').text();
+            });
+            return lyricsText;
+        }
+
+        function filterMeasuresByEnding(xmlData, verseNum) {
+            var activeEndingNumbers = null;
+            Array.from(xmlData.getElementsByTagName('measure')).forEach(function(measure) {
+                var endings = Array.from(measure.getElementsByTagName('ending')).filter(function(ending) {
+                    return ending.parentNode && ending.parentNode.parentNode === measure;
+                });
+
+                var measureEndingNumbers = activeEndingNumbers;
+                endings.forEach(function(ending) {
+                    var type = ending.getAttribute('type');
+                    var nums = parseEndingNumbers(ending.getAttribute('number'));
+                    if (type === 'start') {
+                        activeEndingNumbers = nums;
+                        measureEndingNumbers = nums;
+                    } else if (type === 'stop') {
+                        if (!measureEndingNumbers) measureEndingNumbers = nums.length ? nums : activeEndingNumbers;
+                    } else if (type === 'discontinue') {
+                        if (!measureEndingNumbers) measureEndingNumbers = nums.length ? nums : activeEndingNumbers;
+                    }
+                });
+
+                if (measureEndingNumbers && measureEndingNumbers.length && measureEndingNumbers.indexOf(verseNum) === -1) {
+                    measure.setAttribute('data-drop-measure', 'yes');
+                }
+
+                endings.forEach(function(ending) {
+                    var type = ending.getAttribute('type');
+                    if (type === 'stop') {
+                        activeEndingNumbers = null;
+                    }
+                });
+            });
+
+            Array.from(xmlData.getElementsByTagName('measure')).forEach(function(measure) {
+                if (measure.getAttribute('data-drop-measure') === 'yes' && measure.parentNode) {
+                    measure.parentNode.removeChild(measure);
+                }
+            });
+
+            // 절별로 필요한 ending 구간만 남긴 뒤에는
+            // 표시용 ending(도돌이 숫자/괄호선) 요소 자체를 제거한다.
+            Array.from(xmlData.getElementsByTagName('ending')).forEach(function(ending) {
+                if (ending.parentNode) {
+                    ending.parentNode.removeChild(ending);
+                }
+            });
+
+            Array.from(xmlData.getElementsByTagName('barline')).forEach(function(barline) {
+                var repeats = Array.from(barline.getElementsByTagName('repeat')).filter(function(repeat) {
+                    return repeat.parentNode === barline;
+                });
+                if (!repeats.length) return;
+
+                repeats.forEach(function(repeat) {
+                    if (repeat.parentNode) repeat.parentNode.removeChild(repeat);
+                });
+
+                var barStyle = null;
+                Array.from(barline.getElementsByTagName('bar-style')).forEach(function(node) {
+                    if (!barStyle && node.parentNode === barline) barStyle = node;
+                });
+                if (!barStyle) {
+                    barStyle = xmlData.createElement('bar-style');
+                    barline.insertBefore(barStyle, barline.firstChild);
+                }
+                barStyle.textContent = 'light-light';
+            });
+
+            return xmlData;
+        }
+
+        function parseEndingNumbers(numberAttr) {
+            if (!numberAttr) return [];
+            return numberAttr.split(',')
+                .map(function(s) { return parseInt(s.trim(), 10); })
+                .filter(function(n) { return !isNaN(n); });
+        }
+
+        // ─── PPT 생성 ─────────────────────────────────────────────────
+        async function makePPTX() {
+            var canvPages = $('div[id^="osmdCanvasPage"]');
+            if (!canvPages.length) { alert("생성된 악보가 없습니다."); return; }
+
+            $('.ui.dimmer').dimmer('show');
+
+            try {
+                await withExportRenderWithoutMeasureNumbers(async function(renderedPages) {
+                    await changeXYposition();
+                    $(renderedPages).each(function(index, item) {
+                        $(item).attr("id", "osmdCanvasPage" + (index + 1));
+                    });
+
+                    await makeCanvas2PPTX(renderedPages, {
+                        includeTabs: $("#exportIncludeTabs").is(':checked'),
+                        quality: getSelectedExportQuality('single')
+                    });
+                });
+            } catch (err) {
+                $('.ui.dimmer').dimmer('hide');
+                alert("PPT 생성 오류: " + err);
+            } finally {
+                $('.ui.dimmer').dimmer('hide');
+            }
+        }
+
+        async function makePNGZip(options) {
+            options = options || {};
+            var quality = options.quality || getSelectedExportQuality('single');
+            var canvPages = $('div[id^="osmdCanvasPage"]');
+            if (!canvPages.length) { alert("생성된 악보가 없습니다."); return; }
+            if (typeof JSZip === 'undefined') { alert("ZIP 라이브러리를 불러오지 못했습니다."); return; }
+
+            $('.ui.dimmer').dimmer('show');
+
+            try {
+                await withExportRenderWithoutMeasureNumbers(async function(renderedPages) {
+                    await changeXYposition();
+                    $(renderedPages).each(function(index, item) {
+                        $(item).attr("id", "osmdCanvasPage" + (index + 1));
+                    });
+
+                    var zip = new JSZip();
+                    var baseName = getSafeBaseFileName(quality);
+
+                    for (var i = 0; i < renderedPages.length; i++) {
+                        $("#dimmerMsg").text((i + 1) + "/" + renderedPages.length + " PNG 생성중...");
+                        var imgUri = await getImgUri(renderedPages[i], {
+                            includeTitle: true,
+                            includeTabs: options.includeTabs !== false,
+                            includeConfiguredBackground: true,
+                            quality: quality
+                        });
+                        var base64 = imgUri.split(',')[1];
+                        var parentId = $(renderedPages[i]).parent().attr("id") || "";
+                        var verseNum = parseInt(parentId.replace(/[^0-9]/g, ''), 10) || 0;
+                        var fileName = verseNum
+                            ? baseName + "_verse" + verseNum + "_page" + (i + 1) + ".png"
+                            : baseName + "_page" + (i + 1) + ".png";
+                        zip.file(fileName, base64, { base64: true });
+                    }
+
+                    $("#dimmerMsg").text("ZIP 파일 생성중...");
+                    var blob = await zip.generateAsync({ type: 'blob' });
+                    var a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = getSafeBaseFileName(quality) + ".zip";
+                    a.click();
+                    URL.revokeObjectURL(a.href);
+                });
+            } catch (err) {
+                alert("PNG ZIP 생성 오류: " + err);
+            } finally {
+                $('.ui.dimmer').dimmer('hide');
+            }
+        }
+
+        async function makeCanvas2PPTX(canvPages, options) {
+            var pptx = await createPptxFromCanvPages(canvPages, options);
+            try {
+                await pptx.writeFile({ fileName: getSafePptFileName((options && options.quality) || getSelectedExportQuality('single')) });
+            } finally {
+                revokePptImageUrls(pptx);
+            }
+        }
+
+        async function createPptxFromCanvPages(canvPages, options) {
+            options = options || {};
+            var backgroundColor = $("#color-picker").val();
+            var bgData = $("#file-content").text();
+            var bgOption = "";
+            if (bgData.length > 0) {
+                bgOption = { image: { w: '100%', h: '100%', data: bgData, sizing: { type: 'cover', w: '100%', h: '100%' } } };
+            }
+
+            var pptx = new PptxGenJS();
+            pptx.layout = 'LAYOUT_WIDE';
+            pptx._codexObjectUrls = [];
+            pptx.defineSlideMaster({
+                title: "MASTER_SLIDE",
+                bkgd: backgroundColor,
+                objects: [bgOption],
+            });
+
+            for (var i = 0; i < canvPages.length; i++) {
+                $("#dimmerMsg").text((i + 1) + "/" + canvPages.length + " 페이지 생성중...");
+
+                var slide = pptx.addSlide({ masterName: "MASTER_SLIDE" });
+                var imgUri = await getImgUri(canvPages[i], {
+                    quality: options.quality || getSelectedExportQuality('single'),
+                    includeTitle: false,
+                    includeTabs: false
+                });
+                var objectUrl = URL.createObjectURL(dataUriToBlob(imgUri));
+                pptx._codexObjectUrls.push(objectUrl);
+
+                slide.addImage({
+                    path: objectUrl,
+                    x: '0%',
+                    y: '0%',
+                    w: '100%',
+                    h: '100%',
+                    sizing: { type: 'cover', w: '100%', h: '100%' }
+                });
+
+                slide.addText((appState.titleText || '').trim(), {
+                    x: "7%",
+                    y: 0.3,
+                    w: "93%",
+                    h: 0.5,
+                    align: "left",
+                    valign: "middle",
+                    color: "000000",
+                    fontFace: appState.fontFamilyName,
+                    fontSize: 20,
+                    bold: false
+                });
+
+                if (options.includeTabs !== false) {
+                    addVerseTabsToSlide(pptx, slide, canvPages, i);
+                }
+            }
+
+            return pptx;
+        }
+
+        async function makeAllPptZip() {
+            if (!confirm("645장 전체 PPT를 ZIP으로 생성합니다. 시간이 오래 걸릴 수 있습니다. 계속할까요?")) {
+                return;
+            }
+            var quality = getSelectedExportQuality('batch');
+            await makePptZipBatch({
+                hymnNumbers: hymnArrays.map(function(item) { return item.number; }),
+                zipName: "새찬송가_645장_PPT.zip",
+                progressLabel: "찬송 PPT 생성중...",
+                errorLabel: "645장 PPT 일괄 생성 오류",
+                quality: quality
+            });
+        }
+
+        async function makeAllPngZip() {
+            if (!confirm("645장 전체 PNG를 ZIP으로 생성합니다. 시간이 오래 걸릴 수 있습니다. 계속할까요?")) {
+                return;
+            }
+            var quality = getSelectedExportQuality('batch');
+            await makePngZipBatch({
+                hymnNumbers: hymnArrays.map(function(item) { return item.number; }),
+                zipName: "새찬송가_645장_PNG.zip",
+                progressLabel: "찬송 PNG 생성중...",
+                errorLabel: "645장 PNG 일괄 생성 오류",
+                quality: quality
+            });
+        }
+
+        function getBatchRangeSelection() {
+            var start = parseInt($("#batchRangeStart").val(), 10);
+            var end = parseInt($("#batchRangeEnd").val(), 10);
+            if (isNaN(start) || isNaN(end)) {
+                alert("범위 시작/끝 장 번호를 입력해 주세요.");
+                return null;
+            }
+
+            start = Math.max(1, start);
+            end = Math.min(645, end);
+            if (start > end) {
+                var temp = start;
+                start = end;
+                end = temp;
+            }
+
+            var hymnNumbers = hymnArrays
+                .filter(function(item) {
+                    var num = parseInt(item.number, 10);
+                    return !isNaN(num) && num >= start && num <= end;
+                })
+                .map(function(item) { return item.number; });
+
+            if (!hymnNumbers.length) {
+                alert("해당 범위에 찬송가가 없습니다.");
+                return null;
+            }
+
+            return {
+                start: start,
+                end: end,
+                hymnNumbers: hymnNumbers
+            };
+        }
+
+        function getHymnTitleByNumber(hymnNum) {
+            var found = hymnArrays.find(function(item) { return item.number === hymnNum; });
+            return found ? found.title : (hymnNum + "장");
+        }
+
+        function showBatchStatus(primary, secondary) {
+            $("#batchStatusPrimary").text(primary || "");
+            $("#batchStatusSecondary").text(secondary || "");
+            $("#batchStatusPanel").show();
+        }
+
+        function hideBatchStatus() {
+            $("#batchStatusPanel").hide();
+            $("#batchStatusPrimary").text("");
+            $("#batchStatusSecondary").text("");
+        }
+
+        async function pauseBetweenChunks(ms, primary, secondary) {
+            showBatchStatus(primary, secondary);
+            await new Promise(function(resolve) { setTimeout(resolve, ms || 800); });
+        }
+
+        function setBatchProgressMessage(options, indexInChunk, hymnNum, fallbackLabel) {
+            var totalChunk = (options.hymnNumbers || []).length;
+            var overallOffset = options.overallOffset || 0;
+            var totalOverall = options.totalOverall || totalChunk;
+            var overallIndex = overallOffset + indexInChunk + 1;
+            var chunkIndex = options.chunkIndex || 1;
+            var totalChunks = options.totalChunks || 1;
+            var chunkLabel = totalChunks > 1 ? ("묶음 " + chunkIndex + "/" + totalChunks) : "단일 묶음";
+            var hymnTitle = getHymnTitleByNumber(hymnNum);
+            $("#dimmerMsg").text(options.progressLabel || fallbackLabel);
+            showBatchStatus(
+                "전체 " + overallIndex + "/" + totalOverall + " · " + chunkLabel,
+                hymnTitle + " · " + (options.progressLabel || fallbackLabel)
+            );
+        }
+
+        async function makeRangePptZip() {
+            var range = getBatchRangeSelection();
+            if (!range) return;
+            await makeChunkedRangeZip(range, 'ppt', getSelectedExportQuality('batch'));
+        }
+
+        async function makeRangePngZip() {
+            var range = getBatchRangeSelection();
+            if (!range) return;
+            await makeChunkedRangeZip(range, 'png', getSelectedExportQuality('batch'));
+        }
+
+        async function makeChunkedRangeZip(range, type, quality) {
+            var chunkSize = 50;
+            var total = range.hymnNumbers.length;
+            var totalChunks = Math.ceil(total / chunkSize);
+            var sharedState = captureCurrentUiState();
+
+            if (totalChunks > 1) {
+                var ok = confirm(
+                    range.start + "-" + range.end + " 범위는 " + total + "장입니다.\n" +
+                    chunkSize + "장씩 나누어 총 " + totalChunks + "개의 ZIP으로 생성합니다. 계속할까요?"
+                );
+                if (!ok) return;
+            }
+
+            showBatchStatus(
+                "전체 0/" + total + " · 묶음 0/" + totalChunks,
+                "배치 작업 준비중..."
+            );
+
+            for (var ci = 0; ci < totalChunks; ci++) {
+                var chunkNumbers = range.hymnNumbers.slice(ci * chunkSize, (ci + 1) * chunkSize);
+                if (!chunkNumbers.length) continue;
+
+                var chunkStart = parseInt(chunkNumbers[0], 10);
+                var chunkEnd = parseInt(chunkNumbers[chunkNumbers.length - 1], 10);
+                var commonOptions = {
+                    hymnNumbers: chunkNumbers,
+                    zipName: "새찬송가_" + String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "_" + type.toUpperCase() + ".zip",
+                    progressLabel: String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "장 " + type.toUpperCase() + " 생성중...",
+                    errorLabel: "범위 " + type.toUpperCase() + " 생성 오류",
+                    quality: quality,
+                    sharedState: sharedState,
+                    skipRestore: true,
+                    totalOverall: total,
+                    overallOffset: ci * chunkSize,
+                    chunkIndex: ci + 1,
+                    totalChunks: totalChunks
+                };
+
+                if (type === 'ppt') {
+                    await makePptZipBatch(commonOptions);
+                } else {
+                    await makePngZipBatch(commonOptions);
+                }
+
+                if (ci < totalChunks - 1) {
+                    $("#createCanvas").empty();
+                    await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+                    await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+                    await pauseBetweenChunks(
+                        800,
+                        "묶음 " + (ci + 1) + "/" + totalChunks + " 완료",
+                        "다음 묶음 준비중... 브라우저 메모리 정리중"
+                    );
+                }
+            }
+
+            await restoreFullUiState(sharedState);
+            hideBatchStatus();
+        }
+
+        async function makePptZipBatch(options) {
+            if (typeof JSZip === 'undefined') {
+                alert("ZIP 라이브러리를 불러오지 못했습니다.");
+                return;
+            }
+
+            var previousState = options.sharedState || captureCurrentUiState();
+            var hymnNumbers = options.hymnNumbers || [];
+            var zip = new JSZip();
+
+            $('.ui.dimmer').dimmer('show');
+            appState.suppressAutoStabilize = true;
+            var previousShowMeasureNumbers = appState.showMeasureNumbers;
+            appState.showMeasureNumbers = false;
+
+            try {
+                for (var i = 0; i < hymnNumbers.length; i++) {
+                    var hymnNum = hymnNumbers[i];
+                    setBatchProgressMessage(options, i, hymnNum, "PPT 생성중...");
+
+                    setIniValue();
+                    restorePersistentUiOptions(previousState);
+                    await loadHymn(hymnNum);
+                    await waitForRenderStability();
+
+                    var canvPages = Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
+                        return el && el.isConnected;
+                    });
+                    if (!canvPages.length) throw new Error(hymnNum + "장 렌더링 페이지를 찾을 수 없습니다.");
+
+                    await changeXYposition();
+                    $(canvPages).each(function(index, item) {
+                        $(item).attr("id", "osmdCanvasPage" + (index + 1));
+                    });
+
+                    var pptx = await createPptxFromCanvPages(canvPages, {
+                        includeTabs: $("#exportIncludeTabs").is(':checked'),
+                        quality: options.quality || getSelectedExportQuality('batch')
+                    });
+                    try {
+                        var blob = await pptx.write({ outputType: 'blob' });
+                        zip.file(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + ".pptx", blob);
+                    } finally {
+                        revokePptImageUrls(pptx);
+                    }
+                }
+
+                $("#dimmerMsg").text("ZIP 파일 생성중...");
+                var zipBlob = await zip.generateAsync({ type: 'blob' });
+                var a = document.createElement('a');
+                a.href = URL.createObjectURL(zipBlob);
+                a.download = options.zipName || "hymn_ppt_batch.zip";
+                a.click();
+                URL.revokeObjectURL(a.href);
+                zipBlob = null;
+                zip = null;
+            } catch (err) {
+                alert((options.errorLabel || "PPT 일괄 생성 오류") + ": " + err);
+            } finally {
+                appState.suppressAutoStabilize = false;
+                appState.showMeasureNumbers = previousShowMeasureNumbers;
+                $('.ui.dimmer').dimmer('hide');
+                if (!options.skipRestore) {
+                    await restoreFullUiState(previousState);
+                }
+                if (!options.skipRestore) hideBatchStatus();
+            }
+        }
+
+        async function makePngZipBatch(options) {
+            if (typeof JSZip === 'undefined') {
+                alert("ZIP 라이브러리를 불러오지 못했습니다.");
+                return;
+            }
+
+            var previousState = options.sharedState || captureCurrentUiState();
+            var hymnNumbers = options.hymnNumbers || [];
+            var zip = new JSZip();
+
+            $('.ui.dimmer').dimmer('show');
+            appState.suppressAutoStabilize = true;
+            var previousShowMeasureNumbers = appState.showMeasureNumbers;
+            appState.showMeasureNumbers = false;
+
+            try {
+                for (var i = 0; i < hymnNumbers.length; i++) {
+                    var hymnNum = hymnNumbers[i];
+                    setBatchProgressMessage(options, i, hymnNum, "PNG 생성중...");
+
+                    setIniValue();
+                    restorePersistentUiOptions(previousState);
+                    await loadHymn(hymnNum);
+                    await waitForRenderStability();
+
+                    var canvPages = Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
+                        return el && el.isConnected;
+                    });
+                    if (!canvPages.length) throw new Error(hymnNum + "장 렌더링 페이지를 찾을 수 없습니다.");
+
+                    await changeXYposition();
+                    $(canvPages).each(function(index, item) {
+                        $(item).attr("id", "osmdCanvasPage" + (index + 1));
+                    });
+
+                    var hymnFolder = zip.folder(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')));
+                    for (var pi = 0; pi < canvPages.length; pi++) {
+                        $("#dimmerMsg").text((i + 1) + "/" + hymnNumbers.length + " " + getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + " PNG 생성중...");
+                        var imgUri = await getImgUri(canvPages[pi], {
+                            includeTitle: true,
+                            includeTabs: $("#exportIncludeTabs").is(':checked'),
+                            includeConfiguredBackground: true,
+                            quality: options.quality || getSelectedExportQuality('batch')
+                        });
+                        var base64 = imgUri.split(',')[1];
+                        var parentId = $(canvPages[pi]).parent().attr("id") || "";
+                        var verseNum = parseInt(parentId.replace(/[^0-9]/g, ''), 10) || 0;
+                        var fileName = verseNum
+                            ? getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_verse" + verseNum + "_page" + (pi + 1) + ".png"
+                            : getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_page" + (pi + 1) + ".png";
+                        hymnFolder.file(fileName, base64, { base64: true });
+                    }
+                }
+
+                $("#dimmerMsg").text("ZIP 파일 생성중...");
+                var zipBlob = await zip.generateAsync({ type: 'blob' });
+                var a = document.createElement('a');
+                a.href = URL.createObjectURL(zipBlob);
+                a.download = options.zipName || "hymn_png_batch.zip";
+                a.click();
+                URL.revokeObjectURL(a.href);
+                zipBlob = null;
+                zip = null;
+            } catch (err) {
+                alert((options.errorLabel || "PNG 일괄 생성 오류") + ": " + err);
+            } finally {
+                appState.suppressAutoStabilize = false;
+                appState.showMeasureNumbers = previousShowMeasureNumbers;
+                $('.ui.dimmer').dimmer('hide');
+                if (!options.skipRestore) {
+                    await restoreFullUiState(previousState);
+                }
+                if (!options.skipRestore) hideBatchStatus();
+            }
+        }
+
+        function captureCurrentUiState() {
+            return {
+                hymnNum: $("#hymnLists").val(),
+                fontFace: $("#LyricsFontface").val(),
+                fontSize: $("#LyricsFontSize").val(),
+                zoomSize: $("#zoomSize").val(),
+                lineBreakMeasures: $("#lineBreakMeasures").val(),
+                splitMeasures: $("#splitMeasures").val(),
+                color: $("#color-picker").val(),
+                bgData: $("#file-content").text()
+            };
+        }
+
+        function restorePersistentUiOptions(state) {
+            if (!state) return;
+            $("#LyricsFontface").dropdown('set selected', state.fontFace || 'GmarketSansMedium');
+            $("#LyricsFontSize").val(state.fontSize || '28');
+            $("#zoomSize").val(state.zoomSize || '1.3');
+            $("#color-picker").val(state.color || '#FFFFFF');
+            $("#color-picker").trigger('keyup');
+            if (state.bgData) {
+                $("#file-content").text(state.bgData);
+                $("#preview").css({
+                    "background-image": "url(" + state.bgData + ")",
+                    "background-repeat": "no-repeat",
+                    "background-size": "100% 100%"
+                });
+            }
+            getSetValues();
+        }
+
+        async function restoreFullUiState(state) {
+            if (!state) return;
+            setIniValue();
+            restorePersistentUiOptions(state);
+            $("#lineBreakMeasures").val(state.lineBreakMeasures || '');
+            $("#splitMeasures").val(state.splitMeasures || '');
+            if (state.hymnNum && state.hymnNum !== '-- 장/제목 검색 --') {
+                $('#hymnLists').dropdown('set selected', state.hymnNum);
+                await loadHymn(state.hymnNum);
+                $("#lineBreakMeasures").val(state.lineBreakMeasures || $("#lineBreakMeasures").val());
+                $("#splitMeasures").val(state.splitMeasures || $("#splitMeasures").val());
+                if (state.lineBreakMeasures || state.splitMeasures) {
+                    await reCall();
+                }
+            } else {
+                $('#hymnLists').dropdown('restore defaults');
+            }
+        }
+
+        async function getImgUri(item, options) {
+            options = options || {};
+            if (!item) throw new Error("캡처 대상 페이지를 찾을 수 없습니다.");
+            var rect = item.getBoundingClientRect();
+            var capturedCanvas = await html2canvas(item, {
+                width: Math.max(1, Math.round(rect.width || 1024)),
+                height: Math.max(1, Math.round(rect.height || 576)),
+                scale: 4,
+                allowTaint: false,
+                logging: false,
+                backgroundColor: 'transparent',
+                onclone: async function(clonedDoc) {
+                    await applyCaptureFontStyles(clonedDoc);
+                    adjustLeadingVerseNumbersInClone(clonedDoc);
+                    if (!appState.exportHideMeasureNumbers) return;
+                    hideMeasureNumbersInClone(clonedDoc);
+                }
+            });
+
+            var canvas = normalizeCanvasToFhd(capturedCanvas);
+            if (appState.exportHideMeasureNumbers) {
+                eraseMeasureNumbersFromCanvas(canvas, item);
+            }
+            if (options.includeConfiguredBackground) {
+                canvas = await applyConfiguredBackgroundToCanvas(canvas);
+            }
+            if (options.includeTitle) {
+                drawTitleOnCanvas(canvas);
+                if (options.includeTabs !== false) {
+                    drawVerseTabsOnCanvas(canvas, item);
+                }
+            }
+            return canvas.toDataURL('image/png', 1.0);
+        }
+
+        async function applyConfiguredBackgroundToCanvas(sourceCanvas) {
+            var backgroundColor = ($("#color-picker").val() || '#FFFFFF').trim();
+            var bgData = ($("#file-content").text() || '').trim();
+            var hasCustomColor = backgroundColor && backgroundColor.toUpperCase() !== '#FFFFFF';
+            var hasBackgroundImage = !!bgData;
+
+            if (!hasCustomColor && !hasBackgroundImage) {
+                return sourceCanvas;
+            }
+
+            var canvas = document.createElement('canvas');
+            canvas.width = sourceCanvas.width;
+            canvas.height = sourceCanvas.height;
+
+            var ctx = canvas.getContext('2d');
+            if (!ctx) return sourceCanvas;
+
+            if (hasCustomColor) {
+                ctx.fillStyle = backgroundColor || '#FFFFFF';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            if (hasBackgroundImage) {
+                try {
+                    var bgImg = await loadImage(bgData);
+                    var scale = Math.max(canvas.width / bgImg.width, canvas.height / bgImg.height);
+                    var drawW = bgImg.width * scale;
+                    var drawH = bgImg.height * scale;
+                    var drawX = (canvas.width - drawW) / 2;
+                    var drawY = (canvas.height - drawH) / 2;
+                    ctx.drawImage(bgImg, drawX, drawY, drawW, drawH);
+                } catch (err) {
+                    // 배경 이미지를 불러오지 못하면 배경색만 유지
+                }
+            }
+
+            ctx.drawImage(sourceCanvas, 0, 0);
+            return canvas;
+        }
+
+        function loadImage(src) {
+            return new Promise(function(resolve, reject) {
+                var img = new Image();
+                img.onload = function() { resolve(img); };
+                img.onerror = reject;
+                img.src = src;
+            });
+        }
+
+        function normalizeCanvasToFhd(sourceCanvas) {
+            var targetCanvas = document.createElement('canvas');
+            targetCanvas.width = 1920;
+            targetCanvas.height = 1080;
+
+            var ctx = targetCanvas.getContext('2d');
+            if (!ctx) return sourceCanvas;
+
+            ctx.clearRect(0, 0, targetCanvas.width, targetCanvas.height);
+            ctx.drawImage(sourceCanvas, 0, 0, targetCanvas.width, targetCanvas.height);
+            return targetCanvas;
+        }
+
+        function drawTitleOnCanvas(canvas) {
+            var ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            var title = (appState.titleText || '').trim();
+            if (!title) return;
+
+            var x = Math.round(canvas.width * 0.07);
+            var y = Math.round(canvas.height * 0.045);
+            var fontSize = Math.max(40, Math.round(canvas.height * 0.038));
+
+            ctx.save();
+            ctx.font = '400 ' + fontSize + 'px "' + (appState.fontFamilyName || 'GmarketSansMedium') + '"';
+            ctx.fillStyle = '#000000';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'top';
+            ctx.fillText(title, x, y);
+            ctx.restore();
+        }
+
+        function drawVerseTabsOnCanvas(canvas, item) {
+            var ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            var activeVerses = getSelectedVerses();
+            if (activeVerses.length === 0) {
+                activeVerses = Array.from({ length: appState.countLyrics }, function(_, i) { return i + 1; });
+            }
+            if (activeVerses.length <= 1) return;
+
+            var parentId = $(item).parent().attr("id") || "";
+            var currentVerse = parseInt(parentId.replace(/[^0-9]/g, ''), 10) || 0;
+
+            var btnCount = activeVerses.length;
+            var btnW = Math.round(canvas.width * 0.08);
+            var btnH = Math.round(canvas.height * 0.05);
+            var gap = Math.round(canvas.width * 0.02);
+            var totalW = (btnCount * btnW) + ((btnCount - 1) * gap);
+            var startX = Math.round((canvas.width - totalW) / 2);
+            var y = Math.round(canvas.height * 0.89);
+
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = '600 ' + Math.round(canvas.height * 0.03) + 'px "' + (appState.fontFamilyName || 'GmarketSansMedium') + '"';
+
+            activeVerses.forEach(function(vNum, vIdx) {
+                var isActive = (vNum === currentVerse);
+                var x = startX + (vIdx * (btnW + gap));
+                roundRect(ctx, x, y, btnW, btnH, 18);
+                ctx.fillStyle = isActive ? '#5EB6FF' : '#EEF2F6';
+                ctx.fill();
+                ctx.lineWidth = isActive ? 3 : 2;
+                ctx.strokeStyle = isActive ? '#0A4F93' : '#B8C0C8';
+                ctx.stroke();
+
+                ctx.fillStyle = isActive ? '#083A6B' : '#5F6B76';
+                ctx.fillText(vNum + '절', x + (btnW / 2), y + (btnH / 2));
+            });
+
+            ctx.restore();
+        }
+
+        function roundRect(ctx, x, y, width, height, radius) {
+            var r = Math.min(radius, width / 2, height / 2);
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.lineTo(x + width - r, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + r);
+            ctx.lineTo(x + width, y + height - r);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - r, y + height);
+            ctx.lineTo(x + r, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - r);
+            ctx.lineTo(x, y + r);
+            ctx.quadraticCurveTo(x, y, x + r, y);
+            ctx.closePath();
+        }
+
+        function eraseMeasureNumbersFromCanvas(canvas, item) {
+            if (!canvas || !item) return;
+            var ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            var itemRect = item.getBoundingClientRect();
+            if (!itemRect || !itemRect.width || !itemRect.height) return;
+
+            var scaleX = canvas.width / itemRect.width;
+            var scaleY = canvas.height / itemRect.height;
+            var seen = new Set();
+            var targets = [];
+
+            Array.from(item.querySelectorAll('svg text, svg tspan')).forEach(function(node) {
+                var text = normalizeNumericSvgText(node.textContent || '');
+                if (!text) return;
+                if (!isLikelyMeasureNumberText(node, text) && !isLikelyMeasureNumberByRect(node)) return;
+
+                var target = node.closest ? (node.closest('text') || node) : node;
+                if (!target || seen.has(target)) return;
+                seen.add(target);
+                targets.push(target);
+            });
+
+            ctx.save();
+            ctx.globalCompositeOperation = 'destination-out';
+            targets.forEach(function(target) {
+                try {
+                    var rect = target.getBoundingClientRect();
+                    if (!rect || rect.width <= 0 || rect.height <= 0) return;
+                    var x = Math.max(0, Math.floor((rect.left - itemRect.left - 6) * scaleX));
+                    var y = Math.max(0, Math.floor((rect.top - itemRect.top - 4) * scaleY));
+                    var w = Math.min(canvas.width - x, Math.ceil((rect.width + 12) * scaleX));
+                    var h = Math.min(canvas.height - y, Math.ceil((rect.height + 8) * scaleY));
+                    if (w <= 0 || h <= 0) return;
+                    ctx.fillRect(x, y, w, h);
+                } catch (err) {
+                    // 특정 SVG 노드는 bounding box 계산이 실패할 수 있음
+                }
+            });
+            ctx.restore();
+        }
+
+        function dataUriToBlob(dataUri) {
+            var parts = String(dataUri || '').split(',');
+            var meta = parts[0] || 'data:image/png;base64';
+            var base64 = parts[1] || '';
+            var mimeMatch = meta.match(/^data:([^;]+);base64$/i);
+            var mimeType = mimeMatch ? mimeMatch[1] : 'image/png';
+            var binary = atob(base64);
+            var bytes = new Uint8Array(binary.length);
+            for (var i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+            }
+            return new Blob([bytes], { type: mimeType });
+        }
+
+        function revokePptImageUrls(pptx) {
+            if (!pptx || !pptx._codexObjectUrls) return;
+            pptx._codexObjectUrls.forEach(function(url) {
+                try { URL.revokeObjectURL(url); } catch (err) {}
+            });
+            pptx._codexObjectUrls = [];
+        }
+
+        function hideMeasureNumbersInClone(doc) {
+            Array.from(doc.querySelectorAll('svg text, svg tspan')).forEach(function(node) {
+                var text = normalizeNumericSvgText(node.textContent || '');
+                if (!text) return;
+                if (!isLikelyMeasureNumberText(node, text)) return;
+
+                hideSvgNode(node);
+                var ownerText = node.closest ? node.closest('text') : null;
+                if (ownerText) hideSvgNode(ownerText);
+                var ownerGroup = node.closest ? node.closest('g') : null;
+                if (ownerGroup) hideSvgNode(ownerGroup);
+            });
+        }
+
+        function hideMeasureNumbersInRenderedScore() {
+            var hiddenNodes = [];
+            Array.from(document.querySelectorAll('#createCanvas svg text, #createCanvas svg tspan')).forEach(function(node) {
+                var text = normalizeNumericSvgText(node.textContent || '');
+                if (!text) return;
+                if (!isLikelyMeasureNumberText(node, text)) return;
+
+                [node.closest ? node.closest('g') : null, node.closest ? node.closest('text') : null, node].forEach(function(target) {
+                    if (!target || hiddenNodes.indexOf(target) !== -1) return;
+                    hiddenNodes.push(target);
+                    target.setAttribute('data-export-prev-visibility', target.style.visibility || '');
+                    target.setAttribute('data-export-prev-display', target.style.display || '');
+                    hideSvgNode(target);
+                });
+            });
+            return hiddenNodes;
+        }
+
+        async function waitForExportDomSettle() {
+            await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+            await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+        }
+
+        function normalizeNumericSvgText(text) {
+            var normalized = String(text || '')
+                .replace(/\s+/g, '')
+                .replace(/\./g, '');
+            return /^\d+(,\d+)*$/.test(normalized) ? normalized : '';
+        }
+
+        function isLikelyMeasureNumberByRect(node) {
+            if (!node || typeof node.getBoundingClientRect !== 'function') return false;
+            var ownerSvg = node.ownerSVGElement;
+            if (!ownerSvg || typeof ownerSvg.getBoundingClientRect !== 'function') return false;
+            try {
+                var rect = node.getBoundingClientRect();
+                var svgRect = ownerSvg.getBoundingClientRect();
+                if (!rect || !svgRect || !svgRect.width || !svgRect.height) return false;
+                if (rect.width <= 0 || rect.height <= 0) return false;
+
+                var relativeTop = rect.top - svgRect.top;
+                return relativeTop <= Math.max(40, svgRect.height * 0.18)
+                    && rect.height <= Math.max(26, svgRect.height * 0.07)
+                    && rect.width <= Math.max(84, svgRect.width * 0.12);
+            } catch (err) {
+                return false;
+            }
+        }
+
+        function isLikelyMeasureNumberByBBox(node) {
+            if (!node || typeof node.getBBox !== 'function') return false;
+            try {
+                var bbox = node.getBBox();
+                if (!bbox || bbox.width <= 0 || bbox.height <= 0) return false;
+                var ownerSvg = node.ownerSVGElement;
+                if (!ownerSvg || typeof ownerSvg.getBBox !== 'function') return false;
+                var svgBox = ownerSvg.getBBox();
+                if (!svgBox || svgBox.height <= 0) return false;
+
+                var relativeTop = bbox.y - svgBox.y;
+                var relativeHeight = bbox.height;
+                return relativeTop <= Math.max(120, svgBox.height * 0.22) && relativeHeight <= 40;
+            } catch (err) {
+                return false;
+            }
+        }
+
+        function restoreHiddenSvgNodes(nodes) {
+            (nodes || []).forEach(function(node) {
+                if (!node || !node.style) return;
+                var prevVisibility = node.getAttribute('data-export-prev-visibility');
+                var prevDisplay = node.getAttribute('data-export-prev-display');
+                node.style.visibility = prevVisibility || '';
+                node.style.display = prevDisplay || '';
+                if (prevVisibility) node.setAttribute('visibility', prevVisibility);
+                else node.removeAttribute('visibility');
+                node.removeAttribute('data-export-prev-visibility');
+                node.removeAttribute('data-export-prev-display');
+            });
+        }
+
+        function hideSvgNode(node) {
+            if (!node || !node.style) return;
+            node.style.visibility = 'hidden';
+            node.style.display = 'none';
+            node.setAttribute('visibility', 'hidden');
+        }
+
+        function isLikelyMeasureNumberText(node, text) {
+            text = normalizeNumericSvgText(text);
+            if (!text) return false;
+
+            var ancestor = node;
+            while (ancestor) {
+                var cls = (ancestor.getAttribute && ancestor.getAttribute('class')) || '';
+                var id = (ancestor.getAttribute && ancestor.getAttribute('id')) || '';
+                var combined = (cls + ' ' + id).toLowerCase();
+                if (combined.indexOf('measurenumber') !== -1 ||
+                    combined.indexOf('vf-measurenumber') !== -1 ||
+                    combined.indexOf('vf-measure-number') !== -1 ||
+                    combined.indexOf('measure-number') !== -1 ||
+                    combined.indexOf('measure number') !== -1 ||
+                    (combined.indexOf('measure') !== -1 && combined.indexOf('number') !== -1)) {
+                    return true;
+                }
+                ancestor = ancestor.parentNode;
+            }
+
+            var x = parseFloat(node.getAttribute && node.getAttribute('x'));
+            var y = parseFloat(node.getAttribute && node.getAttribute('y'));
+            var fontSize = parseFloat(node.getAttribute && node.getAttribute('font-size')) || parseFloat(node.style && node.style.fontSize) || 0;
+
+            if ((isNaN(x) || isNaN(y)) && node.parentNode && node.parentNode.getAttribute) {
+                if (isNaN(x)) x = parseFloat(node.parentNode.getAttribute('x'));
+                if (isNaN(y)) y = parseFloat(node.parentNode.getAttribute('y'));
+                if (!fontSize && node.parentNode.style) {
+                    fontSize = parseFloat(node.parentNode.getAttribute('font-size')) || parseFloat(node.parentNode.style.fontSize) || 0;
+                }
+            }
+
+            // export에서는 마디 번호가 더 우선적으로 숨겨져야 하므로
+            // 상단 영역의 순수 숫자 텍스트는 넓게 마디 번호로 판단한다.
+            // 제목/가사엔 영향이 없고, 시간표 숫자가 일부 숨겨질 수는 있지만
+            // 다운로드본에서는 마디 번호 노출을 막는 쪽을 우선한다.
+            if (!isNaN(y) && y <= 80 && (isNaN(fontSize) || fontSize <= 26)) {
+                return true;
+            }
+
+            if (isLikelyMeasureNumberByRect(node)) {
+                return true;
+            }
+
+            if (isLikelyMeasureNumberByBBox(node)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function applyCaptureFontStyles(doc) {
+            var family = appState.fontFamilyName || 'GmarketSansMedium';
+
+            Array.from(doc.querySelectorAll('svg text, .showLyrics, .verseMsg, #output')).forEach(function(el) {
+                el.style.fontFamily = family;
+                el.style.fontWeight = '400';
+                el.setAttribute('font-family', family);
+                el.setAttribute('font-weight', '400');
+            });
+
+            if (doc.fonts && doc.fonts.ready) {
+                return doc.fonts.ready.catch(function() {});
+            }
+            return Promise.resolve();
+        }
+
+        async function waitForFontsReady() {
+            if (document.fonts && document.fonts.ready) {
+                try {
+                    await document.fonts.ready;
+                } catch (err) {}
+            }
+        }
+
+        async function waitForRenderStability() {
+            await waitForFontsReady();
+            await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+            await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+            await new Promise(function(resolve) { setTimeout(resolve, 80); });
+        }
+
+        async function stabilizeInitialRender(renderCycleId) {
+            if (appState.isAutoStabilizing) return;
+            if (renderCycleId !== appState.renderCycleId) return;
+            if (!appState.currentXmlData || !appState.countLyrics) return;
+
+            appState.isAutoStabilizing = true;
+            try {
+                await waitForFontsReady();
+                await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+                await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+                if (renderCycleId !== appState.renderCycleId) return;
+                await rerenderSelectedVerses();
+            } finally {
+                appState.isAutoStabilizing = false;
+            }
+        }
+
+        function adjustLeadingVerseNumbersInClone(doc) {
+            var shiftX = 10;
+            Array.from(doc.querySelectorAll('svg text')).forEach(function(textEl) {
+                var text = (textEl.textContent || '').trim();
+                if (!/^\d+\./.test(text)) return;
+
+                var x = parseFloat(textEl.getAttribute('x'));
+                if (isNaN(x)) return;
+
+                var newX = Math.max(0, x - shiftX);
+                textEl.setAttribute('x', newX);
+                textEl.style.transform = 'translateX(-' + shiftX + 'px)';
+            });
+        }
+
+        async function changeXYposition() {
+            // Y축 미세 조정
+            $('g text').each(function() {
+                var yVal = parseFloat($(this).attr('y'));
+                if (isNaN(yVal)) return;
+
+                var originalY = $(this).attr('data-original-y');
+                if (originalY === undefined) {
+                    $(this).attr('data-original-y', yVal);
+                    originalY = yVal;
+                } else {
+                    originalY = parseFloat(originalY);
+                }
+
+                if (!isNaN(originalY)) $(this).attr('y', originalY + 10);
+            });
+        }
+
+        function getSafePptFileName(quality) {
+            return getSafeBaseFileName() + ".pptx";
+        }
+
+        function getVerseNumberForPage(item) {
+            var owner = item && item.closest ? item.closest('.musicSheet') : null;
+            if (!owner) {
+                owner = $(item).closest('.musicSheet')[0] || null;
+            }
+            var ownerId = owner ? (owner.getAttribute('id') || '') : '';
+            return parseInt(ownerId.replace(/[^0-9]/g, ''), 10) || 0;
+        }
+
+        function getSafeBaseFileName(quality) {
+            var rawTitle = (appState.titleText || "hymn").trim();
+            var safeTitle = rawTitle.replace(/[\\/:*?"<>|]/g, '_').replace(/\s+/g, ' ').trim();
+            var base = safeTitle || "hymn";
+            return base;
+        }
+
+        async function withExportRenderWithoutMeasureNumbers(task) {
+            var previousShowMeasureNumbers = appState.showMeasureNumbers;
+            var previousSuppressAutoStabilize = appState.suppressAutoStabilize;
+
+            try {
+                if (previousShowMeasureNumbers) {
+                    appState.showMeasureNumbers = false;
+                    appState.suppressAutoStabilize = true;
+                    await rerenderSelectedVerses();
+                    await waitForRenderStability();
+                }
+
+                var renderedPages = Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
+                    return el && el.isConnected;
+                });
+                if (!renderedPages.length) {
+                    throw new Error("캡처 가능한 렌더링 페이지를 찾을 수 없습니다.");
+                }
+
+                return await task(renderedPages);
+            } finally {
+                if (previousShowMeasureNumbers) {
+                    appState.showMeasureNumbers = previousShowMeasureNumbers;
+                    await rerenderSelectedVerses();
+                    await waitForRenderStability();
+                }
+                appState.suppressAutoStabilize = previousSuppressAutoStabilize;
+            }
+        }
+
+        function addVerseTabsToSlide(pptx, slide, canvPages, currentPageIndex) {
+            var verseSlideMap = {};
+            canvPages.forEach(function(page, index) {
+                var verseNum = getVerseNumberForPage(page);
+                if (verseNum && !verseSlideMap[verseNum]) {
+                    verseSlideMap[verseNum] = index + 1;
+                }
+            });
+
+            var activeVerses = Object.keys(verseSlideMap).map(Number).sort(function(a, b) { return a - b; });
+            if (activeVerses.length <= 1) return;
+
+            var currentVerse = getVerseNumberForPage(canvPages[currentPageIndex]);
+            var btnW = 1.0;
+            var btnH = 0.32;
+            var gap = 0.26;
+            var totalW = (activeVerses.length * btnW) + ((activeVerses.length - 1) * gap);
+            var startX = (13.333 - totalW) / 2;
+            var y = 6.63;
+
+            activeVerses.forEach(function(verseNum, idx) {
+                var isActive = verseNum === currentVerse;
+                slide.addText(verseNum + '절', {
+                    hyperlink: { slide: verseSlideMap[verseNum], tooltip: verseNum + '절' },
+                    shape: pptx.shapes.ROUNDED_RECTANGLE,
+                    fill: { color: isActive ? '5EB6FF' : 'EEF2F6' },
+                    line: { color: isActive ? '0A4F93' : 'B8C0C8', width: isActive ? 1.5 : 1 },
+                    rectRadius: 1,
+                    x: startX + (idx * (btnW + gap)),
+                    y: y,
+                    w: btnW,
+                    h: btnH,
+                    align: "center",
+                    valign: "middle",
+                    color: isActive ? '083A6B' : '5F6B76',
+                    fontFace: appState.fontFamilyName,
+                    fontSize: 10,
+                    bold: isActive
+                });
+            });
+        }
+
+        // ─── 배경 이미지 업로드 ──────────────────────────────────────
+        $("#input-img").on('change', function() { ResizeImage(); });
+
+        $(".btn-delete").click(function() {
+            $("#input-img").val("");
+            $("#preview").css({ "background-image": "none" });
+            $("#file-content").empty();
+        });
+
+        function ResizeImage() {
+            var files = document.getElementById('input-img').files;
+            if (!files.length) return;
+            var file = files[0];
+
+            if (file.size > 20971520) {
+                var mb = Math.round(file.size / 1024 / 1024 * 10) / 10;
+                alert("현재 이미지 파일크기: " + mb + "Mb\n20Mb 이하만 업로드 가능합니다.");
+                return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var img = new Image();
+                img.src = e.target.result;
+                img.addEventListener('load', function() {
+                    var MAX_W = 1920, MAX_H = 1080;
+                    var w = img.width, h = img.height;
+                    if (w > h) { if (w > MAX_W) { h *= MAX_W / w; w = MAX_W; } }
+                    else       { if (h > MAX_H) { w *= MAX_H / h; h = MAX_H; } }
+
+                    var canvas = document.createElement("canvas");
+                    canvas.width  = w;
+                    canvas.height = h;
+                    canvas.getContext("2d").drawImage(img, 0, 0, w, h);
+
+                    var dataurl = canvas.toDataURL("image/png", 1.0);
+                    $("#file-content").text(dataurl);
+                    $("#preview").css({
+                        "background-image":  "url(" + dataurl + ")",
+                        "background-repeat": "no-repeat",
+                        "background-size":   "100% 100%"
+                    });
+                }, false);
+            };
+            reader.readAsDataURL(file);
+        }
+
+    </script>
+
+</body>
+</html>

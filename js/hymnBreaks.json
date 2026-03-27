@@ -1,0 +1,8584 @@
+{
+  "001": {
+    "breaks": [],
+    "verses": 1,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "manual",
+    "splits": "3:3,5:3,7:3"
+  },
+  "002": {
+    "breaks": [
+      5
+    ],
+    "verses": 1,
+    "total_measures": 12,
+    "double_bar": 11,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "003": {
+    "breaks": [
+      6
+    ],
+    "verses": 1,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "004": {
+    "breaks": [
+      4,
+      8,
+      11
+    ],
+    "verses": 1,
+    "total_measures": 14,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "005": {
+    "breaks": [
+      6
+    ],
+    "verses": 1,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "006": {
+    "breaks": [
+      6
+    ],
+    "verses": 1,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "007": {
+    "breaks": [
+      2
+    ],
+    "verses": 1,
+    "total_measures": 10,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "heuristic"
+  },
+  "008": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "009": {
+    "breaks": [
+      7,
+      14,
+      21
+    ],
+    "verses": 4,
+    "total_measures": 31,
+    "double_bar": 29,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "010": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "011": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 26,
+    "double_bar": 24,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "012": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "013": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "014": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "015": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "016": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "017": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "018": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "019": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "020": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "021": {
+    "breaks": [
+      10
+    ],
+    "verses": 3,
+    "total_measures": 23,
+    "double_bar": 21,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "022": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "023": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 11,
+    "double_bar": 9,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "024": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "025": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "026": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "027": {
+    "breaks": [
+      5
+    ],
+    "verses": 5,
+    "total_measures": 12,
+    "double_bar": 11,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "028": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "029": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "030": {
+    "breaks": [
+      5,
+      10,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": 22,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "031": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "032": {
+    "breaks": [
+      7
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "033": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "034": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "035": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "036": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "037": {
+    "breaks": [
+      12
+    ],
+    "verses": 4,
+    "total_measures": 26,
+    "double_bar": 24,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "038": {
+    "breaks": [
+      5,
+      9,
+      13,
+      17,
+      21,
+      25,
+      29
+    ],
+    "verses": 2,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 4.0,
+    "source": "heuristic"
+  },
+  "039": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "040": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "041": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "042": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "043": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "044": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "045": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "046": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 11,
+    "double_bar": 9,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "047": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "048": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "049": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14,
+      16,
+      19
+    ],
+    "verses": 4,
+    "total_measures": 21,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "050": {
+    "breaks": [
+      6,
+      11,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "manual"
+  },
+  "051": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "052": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": 18,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "053": {
+    "breaks": [
+      6
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": 14,
+    "slide_count": 3,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "054": {
+    "breaks": [
+      6
+    ],
+    "verses": 2,
+    "total_measures": 13,
+    "double_bar": 12,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "055": {
+    "breaks": [
+      4
+    ],
+    "verses": 1,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "056": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "057": {
+    "breaks": [
+      8
+    ],
+    "verses": 1,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "058": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "059": {
+    "breaks": [
+      7
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "060": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "061": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "062": {
+    "breaks": [
+      10
+    ],
+    "verses": 4,
+    "total_measures": 23,
+    "double_bar": 21,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "063": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "064": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "065": {
+    "breaks": [
+      12
+    ],
+    "verses": 4,
+    "total_measures": 27,
+    "double_bar": 25,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "066": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "067": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "068": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "069": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 6,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 18,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "070": {
+    "breaks": [
+      4,
+      8,
+      11
+    ],
+    "verses": 4,
+    "total_measures": 14,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "071": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "072": {
+    "breaks": [
+      2,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11
+    ],
+    "verses": 5,
+    "total_measures": 12,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "073": {
+    "breaks": [
+      10
+    ],
+    "verses": 4,
+    "total_measures": 21,
+    "double_bar": 20,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "074": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "075": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "076": {
+    "breaks": [
+      5,
+      10,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "077": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "078": {
+    "breaks": [
+      5,
+      10,
+      16,
+      21,
+      26
+    ],
+    "verses": 3,
+    "total_measures": 34,
+    "double_bar": 33,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "079": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "080": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "081": {
+    "breaks": [
+      4,
+      8,
+      13
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": 19,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "082": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "083": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "084": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      16,
+      19,
+      22
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "085": {
+    "breaks": [
+      6
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": 14,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "086": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "087": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "088": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "089": {
+    "breaks": [
+      21
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "heuristic"
+  },
+  "090": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "091": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "092": {
+    "breaks": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 9,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "093": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "094": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "095": {
+    "breaks": [
+      7
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "096": {
+    "breaks": [
+      3,
+      6,
+      9
+    ],
+    "verses": 4,
+    "total_measures": 12,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "097": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 6,
+    "total_measures": 15,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "098": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "099": {
+    "breaks": [
+      5,
+      10,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "100": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "101": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 18,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "102": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "103": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "104": {
+    "breaks": [
+      10
+    ],
+    "verses": 3,
+    "total_measures": 21,
+    "double_bar": 20,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "105": {
+    "breaks": [
+      16
+    ],
+    "verses": 2,
+    "total_measures": 34,
+    "double_bar": 32,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "106": {
+    "breaks": [
+      5,
+      10,
+      16,
+      21,
+      26
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "107": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "108": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "109": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 14,
+    "double_bar": 12,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "110": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "111": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "112": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "113": {
+    "breaks": [
+      4,
+      8,
+      13
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "114": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "115": {
+    "breaks": [
+      9
+    ],
+    "verses": 4,
+    "total_measures": 21,
+    "double_bar": 19,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "116": {
+    "breaks": [
+      8,
+      16,
+      24
+    ],
+    "verses": 5,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "117": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "118": {
+    "breaks": [
+      6
+    ],
+    "verses": 5,
+    "total_measures": 13,
+    "double_bar": 12,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "119": {
+    "breaks": [
+      3,
+      6,
+      9
+    ],
+    "verses": 4,
+    "total_measures": 12,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "120": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "121": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "122": {
+    "breaks": [
+      5,
+      10,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 22,
+    "double_bar": 21,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "123": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 27,
+    "double_bar": 25,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "124": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "125": {
+    "breaks": [
+      11
+    ],
+    "verses": 4,
+    "total_measures": 22,
+    "double_bar": 21,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "126": {
+    "breaks": [
+      5,
+      10,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 21,
+    "double_bar": 20,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "127": {
+    "breaks": [
+      5,
+      10,
+      16
+    ],
+    "verses": 3,
+    "total_measures": 21,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "128": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 2,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "129": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "130": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "131": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 15,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "132": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "133": {
+    "breaks": [
+      2
+    ],
+    "verses": 3,
+    "total_measures": 5,
+    "double_bar": 4,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "134": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      17,
+      19,
+      21,
+      23
+    ],
+    "verses": 4,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 24,
+    "slides_per_verse": 6.0,
+    "source": "ppt_calc"
+  },
+  "135": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 4,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "136": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "137": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "138": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "139": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "140": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "141": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "142": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "143": {
+    "breaks": [
+      7
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": 15,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "144": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "145": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "146": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "147": {
+    "breaks": [
+      10
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "heuristic"
+  },
+  "148": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "149": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "150": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "151": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "152": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "153": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "154": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "155": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "156": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "157": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "158": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "159": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "160": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "161": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "162": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "163": {
+    "breaks": [
+      3,
+      6,
+      9
+    ],
+    "verses": 5,
+    "total_measures": 14,
+    "double_bar": 13,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "164": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "165": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "166": {
+    "breaks": [
+      20
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": 22,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "heuristic"
+  },
+  "167": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": 24,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "168": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "169": {
+    "breaks": [
+      2,
+      4,
+      7
+    ],
+    "verses": 4,
+    "total_measures": 10,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "170": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 15,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "171": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "172": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 11,
+    "double_bar": 9,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "173": {
+    "breaks": [
+      6
+    ],
+    "verses": 1,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "174": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 13,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "175": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "176": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "177": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "178": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "179": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "180": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "181": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "182": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "183": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "184": {
+    "breaks": [
+      5,
+      10,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 23,
+    "double_bar": 21,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "185": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      23,
+      27
+    ],
+    "verses": 3,
+    "total_measures": 31,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "186": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "187": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "188": {
+    "breaks": [
+      4
+    ],
+    "verses": 6,
+    "total_measures": 8,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "189": {
+    "breaks": [
+      16
+    ],
+    "verses": 3,
+    "total_measures": 34,
+    "double_bar": 32,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "190": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "191": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "192": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "193": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "verses": 3,
+    "total_measures": 12,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "194": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "195": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "196": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 13,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "197": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "198": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "199": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "200": {
+    "breaks": [
+      5,
+      10,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 21,
+    "double_bar": 20,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "201": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "202": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "203": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "204": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "205": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "206": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "207": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "208": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "209": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 11,
+    "double_bar": 10,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "210": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "211": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "212": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "213": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "214": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "215": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "216": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "217": {
+    "breaks": [
+      5,
+      10,
+      15,
+      20,
+      26
+    ],
+    "verses": 3,
+    "total_measures": 34,
+    "double_bar": 32,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "218": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 26,
+    "double_bar": 24,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "219": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "220": {
+    "breaks": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 9,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "221": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 14,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "222": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "223": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "224": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "225": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "226": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 8,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "227": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "228": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "229": {
+    "breaks": [
+      7
+    ],
+    "verses": 6,
+    "total_measures": 14,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "230": {
+    "breaks": [
+      1,
+      2,
+      3
+    ],
+    "verses": 4,
+    "total_measures": 4,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "231": {
+    "breaks": [
+      18,
+      24,
+      29
+    ],
+    "verses": 2,
+    "total_measures": 34,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 3.0,
+    "source": "heuristic"
+  },
+  "232": {
+    "breaks": [
+      8
+    ],
+    "verses": 6,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "233": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 2,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "234": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "235": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "236": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "237": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "238": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "239": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 15,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "240": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "241": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 27,
+    "double_bar": 25,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "242": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "243": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "244": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "245": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      15,
+      17,
+      19
+    ],
+    "verses": 4,
+    "total_measures": 21,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 5.0,
+    "source": "ppt_calc"
+  },
+  "246": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "247": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "248": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "249": {
+    "breaks": [
+      4,
+      8,
+      11,
+      14,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 21,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "250": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "251": {
+    "breaks": [
+      5,
+      10,
+      16,
+      21,
+      26
+    ],
+    "verses": 4,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "252": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "253": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "254": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "255": {
+    "breaks": [
+      4,
+      8,
+      11,
+      14,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 21,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "256": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "257": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "258": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "259": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "260": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "261": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14,
+      17,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": 24,
+    "slide_count": 15,
+    "slides_per_verse": 5.0,
+    "source": "ppt_calc"
+  },
+  "262": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "263": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "264": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "265": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "266": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "267": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 5,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "268": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "269": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "270": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "271": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "272": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "273": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "274": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "275": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "276": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "277": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "278": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "279": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "280": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "281": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "282": {
+    "breaks": [
+      9
+    ],
+    "verses": 6,
+    "total_measures": 20,
+    "double_bar": 19,
+    "slide_count": 12,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "283": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "284": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "285": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 3,
+    "total_measures": 23,
+    "double_bar": 21,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "286": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "287": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "288": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "289": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "290": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "291": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "292": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "293": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 4,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "294": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "295": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "296": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "297": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 15,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "298": {
+    "breaks": [
+      2,
+      4,
+      6
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 9,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "299": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 13,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "300": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "301": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "302": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "303": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "304": {
+    "breaks": [
+      4,
+      8,
+      12,
+      15,
+      19,
+      23,
+      26
+    ],
+    "verses": 3,
+    "total_measures": 30,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "305": {
+    "breaks": [
+      10
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": 18,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "heuristic"
+  },
+  "306": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "307": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "308": {
+    "breaks": [
+      5,
+      10,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "309": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "310": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "311": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "312": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 26,
+    "double_bar": 24,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "313": {
+    "breaks": [
+      3,
+      6,
+      10
+    ],
+    "verses": 4,
+    "total_measures": 13,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "314": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "315": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "316": {
+    "breaks": [
+      13,
+      15,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "heuristic"
+  },
+  "317": {
+    "breaks": [
+      3,
+      6,
+      10
+    ],
+    "verses": 5,
+    "total_measures": 13,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "318": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "319": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "320": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "321": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "322": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "323": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "324": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "325": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "326": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "327": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "328": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "329": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "330": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "331": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "332": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "333": {
+    "breaks": [
+      6
+    ],
+    "verses": 3,
+    "total_measures": 13,
+    "double_bar": 12,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "334": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "335": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12,
+      14,
+      17
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "336": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 26,
+    "double_bar": 24,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "337": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "338": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "339": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "340": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 8,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "341": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "342": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "343": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "344": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "345": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "346": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "347": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "348": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "349": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "350": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 4,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "351": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 25,
+    "double_bar": 24,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "352": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "353": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "354": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "355": {
+    "breaks": [
+      7
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "356": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "357": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "358": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "359": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "360": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      16,
+      19,
+      22
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "361": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      16,
+      19,
+      22
+    ],
+    "verses": 4,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "362": {
+    "breaks": [
+      6
+    ],
+    "verses": 5,
+    "total_measures": 13,
+    "double_bar": 12,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "363": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "364": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "365": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "366": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "367": {
+    "breaks": [
+      2
+    ],
+    "verses": 6,
+    "total_measures": 14,
+    "double_bar": 4,
+    "slide_count": 12,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "368": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "369": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "370": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "371": {
+    "breaks": [
+      4,
+      8,
+      11,
+      15,
+      18,
+      22,
+      26,
+      29,
+      33
+    ],
+    "verses": 3,
+    "total_measures": 36,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 5.0,
+    "source": "ppt_calc"
+  },
+  "372": {
+    "breaks": [
+      2,
+      4,
+      7,
+      9,
+      12,
+      14,
+      16,
+      19,
+      21
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 5.0,
+    "source": "ppt_calc"
+  },
+  "373": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": 14,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "374": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "375": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 13,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "376": {
+    "breaks": [
+      7
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 15,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "377": {
+    "breaks": [
+      6
+    ],
+    "verses": 3,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "378": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "379": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "380": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "381": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      11
+    ],
+    "verses": 5,
+    "total_measures": 13,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "382": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "383": {
+    "breaks": [
+      8
+    ],
+    "verses": 2,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "384": {
+    "breaks": [
+      5,
+      10,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 23,
+    "double_bar": 21,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "385": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 14,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "386": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "387": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "388": {
+    "breaks": [
+      10
+    ],
+    "verses": 4,
+    "total_measures": 22,
+    "double_bar": 21,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "389": {
+    "breaks": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "390": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "391": {
+    "breaks": [
+      2,
+      4,
+      7,
+      9,
+      12,
+      14,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "392": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "393": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "394": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "395": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "396": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "397": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "398": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "399": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "400": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "401": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "402": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "403": {
+    "breaks": [
+      2,
+      4,
+      6
+    ],
+    "verses": 4,
+    "total_measures": 8,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "404": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "405": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "406": {
+    "breaks": [
+      2,
+      4,
+      6,
+      9,
+      11,
+      13,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "407": {
+    "breaks": [
+      5,
+      10,
+      15,
+      20,
+      26
+    ],
+    "verses": 4,
+    "total_measures": 34,
+    "double_bar": 32,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "408": {
+    "breaks": [
+      2,
+      4,
+      6
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 9,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "409": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "410": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "411": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "412": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "413": {
+    "breaks": [
+      4,
+      8,
+      11,
+      15,
+      19
+    ],
+    "verses": 4,
+    "total_measures": 22,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "414": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "415": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "416": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "417": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "418": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "419": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "420": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "421": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "422": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "423": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "424": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 11,
+    "double_bar": 9,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "425": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 11,
+    "double_bar": 9,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "426": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 27,
+    "double_bar": 25,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "427": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "428": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "429": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "430": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "431": {
+    "breaks": [
+      5,
+      10,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "432": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "433": {
+    "breaks": [
+      5,
+      10,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 21,
+    "double_bar": 20,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "434": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "435": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "436": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "437": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "438": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "439": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "440": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "441": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 5,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "442": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "443": {
+    "breaks": [
+      2,
+      4,
+      7,
+      9,
+      11
+    ],
+    "verses": 3,
+    "total_measures": 14,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "444": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 5,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "445": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "446": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "447": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "448": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "449": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      19
+    ],
+    "verses": 5,
+    "total_measures": 23,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "450": {
+    "breaks": [
+      4
+    ],
+    "verses": 5,
+    "total_measures": 11,
+    "double_bar": 9,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "451": {
+    "breaks": [
+      4
+    ],
+    "verses": 6,
+    "total_measures": 8,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "452": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "453": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "454": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "455": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "456": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "457": {
+    "breaks": [
+      3,
+      6,
+      10
+    ],
+    "verses": 4,
+    "total_measures": 13,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "458": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "459": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "460": {
+    "breaks": [
+      8
+    ],
+    "verses": 2,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "461": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 26,
+    "double_bar": 25,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "462": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "463": {
+    "breaks": [
+      11
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": 19,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "heuristic"
+  },
+  "464": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "465": {
+    "breaks": [
+      5,
+      10,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 21,
+    "double_bar": 20,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "466": {
+    "breaks": [
+      2,
+      4,
+      5,
+      6,
+      8
+    ],
+    "verses": 5,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "467": {
+    "breaks": [
+      5,
+      10,
+      16
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": 22,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "468": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "469": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "470": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "471": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "472": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 26,
+    "double_bar": 17,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "473": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "474": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "475": {
+    "breaks": [
+      3,
+      6,
+      10
+    ],
+    "verses": 4,
+    "total_measures": 13,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "476": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "477": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "478": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "479": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "480": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "481": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "482": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "483": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "484": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "485": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "486": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "487": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "488": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "489": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "490": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "491": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12,
+      14,
+      17
+    ],
+    "verses": 5,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 20,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "492": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "493": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "494": {
+    "breaks": [
+      6
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": 13,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "495": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "496": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "497": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "498": {
+    "breaks": [
+      3,
+      6,
+      8
+    ],
+    "verses": 3,
+    "total_measures": 13,
+    "double_bar": 12,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "499": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "500": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "501": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 4,
+    "total_measures": 25,
+    "double_bar": 24,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "502": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "503": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 4,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "504": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "505": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      21
+    ],
+    "verses": 3,
+    "total_measures": 25,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "506": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "507": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "508": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "509": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "510": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "511": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "512": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 9,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "513": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "514": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "515": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "516": {
+    "breaks": [
+      2,
+      4,
+      7,
+      9,
+      12,
+      14,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "517": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "518": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "519": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "520": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "521": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 18,
+    "slides_per_verse": 6.0,
+    "source": "ppt_calc"
+  },
+  "522": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 15,
+    "double_bar": null,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "523": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "524": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "525": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "526": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "527": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "528": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "529": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21
+    ],
+    "verses": 4,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "530": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "531": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "532": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 4,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "533": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 3,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "534": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "535": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "536": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "537": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "538": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "539": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "540": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "541": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "542": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "543": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "544": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "545": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "546": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "547": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "548": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 10,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "549": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "550": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "551": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "552": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "553": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 13,
+    "slides_per_verse": 3.2,
+    "source": "ppt_calc"
+  },
+  "554": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "555": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "556": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "557": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "558": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "559": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "560": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "561": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "562": {
+    "breaks": [
+      8,
+      16,
+      24
+    ],
+    "verses": 3,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "563": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "564": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "565": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "566": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "567": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "568": {
+    "breaks": [
+      2,
+      4,
+      7
+    ],
+    "verses": 3,
+    "total_measures": 10,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "569": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "570": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "571": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "572": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "573": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "574": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "575": {
+    "breaks": [
+      9,
+      13,
+      17,
+      21,
+      25,
+      29,
+      33,
+      37,
+      41,
+      45
+    ],
+    "verses": 3,
+    "total_measures": 48,
+    "double_bar": null,
+    "slide_count": 18,
+    "slides_per_verse": 6.0,
+    "source": "ppt_calc"
+  },
+  "576": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "577": {
+    "breaks": [
+      3,
+      6,
+      10,
+      13,
+      16
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "578": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "579": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "580": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22
+    ],
+    "verses": 3,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 18,
+    "slides_per_verse": 6.0,
+    "source": "ppt_calc"
+  },
+  "581": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "582": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "583": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "584": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 15,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "585": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "verses": 3,
+    "total_measures": 20,
+    "double_bar": 19,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "586": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "587": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "588": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "589": {
+    "breaks": [
+      8
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "590": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "591": {
+    "breaks": [
+      6,
+      12,
+      18
+    ],
+    "verses": 3,
+    "total_measures": 26,
+    "double_bar": 25,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "592": {
+    "breaks": [
+      3,
+      6,
+      9,
+      12,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 18,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "593": {
+    "breaks": [
+      6
+    ],
+    "verses": 6,
+    "total_measures": 13,
+    "double_bar": 12,
+    "slide_count": 12,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "594": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "595": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 11,
+    "double_bar": 10,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "596": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "597": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "598": {
+    "breaks": [
+      8
+    ],
+    "verses": 5,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 5,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "599": {
+    "breaks": [
+      4
+    ],
+    "verses": 6,
+    "total_measures": 10,
+    "double_bar": 8,
+    "slide_count": 12,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "600": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "601": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "602": {
+    "breaks": [
+      4
+    ],
+    "verses": 4,
+    "total_measures": 10,
+    "double_bar": 9,
+    "slide_count": 4,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "603": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "604": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "605": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "606": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": 17,
+    "slide_count": 12,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "607": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "608": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14
+    ],
+    "verses": 4,
+    "total_measures": 19,
+    "double_bar": 17,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "609": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "610": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 3,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 12,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "611": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "612": {
+    "breaks": [
+      8
+    ],
+    "verses": 3,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 6,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "613": {
+    "breaks": [
+      2,
+      4,
+      7,
+      10,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 17,
+    "double_bar": 16,
+    "slide_count": 16,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "614": {
+    "breaks": [
+      6,
+      12
+    ],
+    "verses": 4,
+    "total_measures": 18,
+    "double_bar": null,
+    "slide_count": 6,
+    "slides_per_verse": 1.5,
+    "source": "ppt_calc"
+  },
+  "615": {
+    "breaks": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      25,
+      29
+    ],
+    "verses": 2,
+    "total_measures": 33,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "616": {
+    "breaks": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      13,
+      15
+    ],
+    "verses": 1,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "617": {
+    "breaks": [
+      3,
+      6,
+      8,
+      11,
+      14,
+      16,
+      19
+    ],
+    "verses": 2,
+    "total_measures": 21,
+    "double_bar": null,
+    "slide_count": 8,
+    "slides_per_verse": 4.0,
+    "source": "ppt_calc"
+  },
+  "618": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 1,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "619": {
+    "breaks": [
+      25,
+      29
+    ],
+    "verses": 1,
+    "total_measures": 32,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 4.0,
+    "source": "heuristic"
+  },
+  "620": {
+    "breaks": [
+      5,
+      10,
+      14,
+      19,
+      24
+    ],
+    "verses": 3,
+    "total_measures": 28,
+    "double_bar": null,
+    "slide_count": 9,
+    "slides_per_verse": 3.0,
+    "source": "ppt_calc"
+  },
+  "621": {
+    "breaks": [
+      4
+    ],
+    "verses": 2,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "622": {
+    "breaks": [
+      2,
+      5,
+      7,
+      10,
+      13,
+      16,
+      18,
+      21,
+      24
+    ],
+    "verses": 3,
+    "total_measures": 27,
+    "double_bar": null,
+    "slide_count": 15,
+    "slides_per_verse": 5.0,
+    "source": "ppt_calc"
+  },
+  "623": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 2,
+    "total_measures": 17,
+    "double_bar": null,
+    "slide_count": 4,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "624": {
+    "breaks": [
+      6,
+      8
+    ],
+    "verses": 1,
+    "total_measures": 9,
+    "double_bar": null,
+    "slide_count": 3,
+    "slides_per_verse": 3.0,
+    "source": "heuristic"
+  },
+  "625": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 1,
+    "total_measures": 15,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "626": {
+    "breaks": [
+      4,
+      8,
+      13
+    ],
+    "verses": 1,
+    "total_measures": 18,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "627": {
+    "breaks": [
+      5,
+      10,
+      14
+    ],
+    "verses": 1,
+    "total_measures": 19,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "628": {
+    "breaks": [
+      10
+    ],
+    "verses": 1,
+    "total_measures": 16,
+    "double_bar": 15,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "heuristic"
+  },
+  "629": {
+    "breaks": [
+      5,
+      9,
+      13
+    ],
+    "verses": 1,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "manual"
+  },
+  "630": {
+    "breaks": [
+      8
+    ],
+    "verses": 1,
+    "total_measures": 18,
+    "double_bar": 16,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "631": {
+    "breaks": [
+      4
+    ],
+    "verses": 1,
+    "total_measures": 9,
+    "double_bar": 8,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "632": {
+    "breaks": [
+      3,
+      6,
+      9
+    ],
+    "verses": 1,
+    "total_measures": 12,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "633": {
+    "breaks": [
+      3,
+      6,
+      8
+    ],
+    "verses": 1,
+    "total_measures": 11,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "634": {
+    "breaks": [
+      3
+    ],
+    "verses": 1,
+    "total_measures": 8,
+    "double_bar": 7,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "635": {
+    "breaks": [
+      8,
+      10,
+      13
+    ],
+    "verses": 1,
+    "total_measures": 34,
+    "double_bar": 15,
+    "slide_count": 4,
+    "slides_per_verse": 4.0,
+    "source": "heuristic"
+  },
+  "636": {
+    "breaks": [
+      4
+    ],
+    "verses": 6,
+    "total_measures": 8,
+    "double_bar": 7,
+    "slide_count": 6,
+    "slides_per_verse": 1.0,
+    "source": "manual"
+  },
+  "637": {
+    "breaks": [
+      2
+    ],
+    "verses": 1,
+    "total_measures": 6,
+    "double_bar": 5,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "638": {
+    "breaks": [
+      6,
+      7,
+      12,
+      17,
+      20
+    ],
+    "verses": 1,
+    "total_measures": 24,
+    "double_bar": null,
+    "slide_count": 3,
+    "slides_per_verse": 3.0,
+    "source": "heuristic"
+  },
+  "639": {
+    "breaks": [
+      4,
+      8,
+      12
+    ],
+    "verses": 1,
+    "total_measures": 16,
+    "double_bar": null,
+    "slide_count": 2,
+    "slides_per_verse": 2.0,
+    "source": "ppt_calc"
+  },
+  "640": {
+    "breaks": [
+      2
+    ],
+    "verses": 1,
+    "total_measures": 4,
+    "double_bar": null,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "641": {
+    "breaks": [
+      2
+    ],
+    "verses": 1,
+    "total_measures": 3,
+    "double_bar": null,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "642": {
+    "breaks": [
+      2
+    ],
+    "verses": 1,
+    "total_measures": 4,
+    "double_bar": null,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "643": {
+    "breaks": [
+      5
+    ],
+    "verses": 1,
+    "total_measures": 5,
+    "double_bar": null,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "heuristic"
+  },
+  "644": {
+    "breaks": [
+      4
+    ],
+    "verses": 1,
+    "total_measures": 8,
+    "double_bar": null,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "ppt_calc"
+  },
+  "645": {
+    "breaks": [
+      6
+    ],
+    "verses": 1,
+    "total_measures": 12,
+    "double_bar": null,
+    "slide_count": 1,
+    "slides_per_verse": 1.0,
+    "source": "heuristic"
+  }
+}
