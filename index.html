@@ -201,6 +201,14 @@
             line-height: 1.5;
             color: #d4deea;
         }
+        #batchStatusPanel .statusActions {
+            margin-top: 12px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        #batchStatusPanel .statusActions .ui.button {
+            min-height: 34px;
+        }
     </style>
 </head>
 
@@ -210,6 +218,9 @@
         <div class="statusLabel">Batch Progress</div>
         <div id="batchStatusPrimary" class="statusPrimary"></div>
         <div id="batchStatusSecondary" class="statusSecondary"></div>
+        <div class="statusActions">
+            <button id="batchStopBtn" class="ui tiny red button" type="button" onclick="requestBatchStop()" style="display:none;">중지 후 현재 묶음 저장</button>
+        </div>
     </div>
 
     <div class="ui container raised segments">
@@ -222,7 +233,7 @@
                     <div class="ten wide column">
                         <div class="ui header">
                             <i class="music icon"></i>
-                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 14:04 KST)
+                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 15:52 KST)
                         </div>
                     </div>
                     <div class="right aligned six wide column">
@@ -429,7 +440,9 @@
             exportHideMeasureNumbers: false,
             renderCycleId: 0,
             isAutoStabilizing: false,
-            suppressAutoStabilize: false
+            suppressAutoStabilize: false,
+            batchInProgress: false,
+            batchStopRequested: false
         };
         var hymnBreaksReady = null;
 
@@ -1912,31 +1925,27 @@
         }
 
         async function makeAllPptZip() {
-            if (!confirm("645장 전체 PPT를 ZIP으로 생성합니다. 시간이 오래 걸릴 수 있습니다. 계속할까요?")) {
+            if (!confirm("645장 전체 PPT를 50장씩 나누어 ZIP으로 생성합니다. 시간이 오래 걸릴 수 있습니다. 계속할까요?")) {
                 return;
             }
             var quality = getSelectedExportQuality('batch');
-            await makePptZipBatch({
-                hymnNumbers: hymnArrays.map(function(item) { return item.number; }),
-                zipName: "새찬송가_645장_PPT.zip",
-                progressLabel: "찬송 PPT 생성중...",
-                errorLabel: "645장 PPT 일괄 생성 오류",
-                quality: quality
-            });
+            await makeChunkedRangeZip({
+                start: 1,
+                end: 645,
+                hymnNumbers: hymnArrays.map(function(item) { return item.number; })
+            }, 'ppt', quality);
         }
 
         async function makeAllPngZip() {
-            if (!confirm("645장 전체 PNG를 ZIP으로 생성합니다. 시간이 오래 걸릴 수 있습니다. 계속할까요?")) {
+            if (!confirm("645장 전체 PNG를 50장씩 나누어 ZIP으로 생성합니다. 시간이 오래 걸릴 수 있습니다. 계속할까요?")) {
                 return;
             }
             var quality = getSelectedExportQuality('batch');
-            await makePngZipBatch({
-                hymnNumbers: hymnArrays.map(function(item) { return item.number; }),
-                zipName: "새찬송가_645장_PNG.zip",
-                progressLabel: "찬송 PNG 생성중...",
-                errorLabel: "645장 PNG 일괄 생성 오류",
-                quality: quality
-            });
+            await makeChunkedRangeZip({
+                start: 1,
+                end: 645,
+                hymnNumbers: hymnArrays.map(function(item) { return item.number; })
+            }, 'png', quality);
         }
 
         function getBatchRangeSelection() {
@@ -1983,12 +1992,37 @@
             $("#batchStatusPrimary").text(primary || "");
             $("#batchStatusSecondary").text(secondary || "");
             $("#batchStatusPanel").show();
+            updateBatchStopButton();
         }
 
         function hideBatchStatus() {
             $("#batchStatusPanel").hide();
             $("#batchStatusPrimary").text("");
             $("#batchStatusSecondary").text("");
+            updateBatchStopButton();
+        }
+
+        function updateBatchStopButton() {
+            var $btn = $("#batchStopBtn");
+            if (!appState.batchInProgress) {
+                $btn.hide().prop('disabled', false).removeClass('disabled').text("중지 후 현재 묶음 저장");
+                return;
+            }
+            $btn.show();
+            if (appState.batchStopRequested) {
+                $btn.prop('disabled', true).addClass('disabled').text("중지 요청됨");
+            } else {
+                $btn.prop('disabled', false).removeClass('disabled').text("중지 후 현재 묶음 저장");
+            }
+        }
+
+        function requestBatchStop() {
+            if (!appState.batchInProgress || appState.batchStopRequested) return;
+            appState.batchStopRequested = true;
+            showBatchStatus(
+                $("#batchStatusPrimary").text() || "배치 중지 요청됨",
+                "현재 곡까지 마무리한 뒤 현재 묶음을 저장하고 종료합니다."
+            );
         }
 
         async function pauseBetweenChunks(ms, primary, secondary) {
@@ -2038,51 +2072,68 @@
                 if (!ok) return;
             }
 
+            appState.batchInProgress = true;
+            appState.batchStopRequested = false;
             showBatchStatus(
                 "전체 0/" + total + " · 묶음 0/" + totalChunks,
                 "배치 작업 준비중..."
             );
 
-            for (var ci = 0; ci < totalChunks; ci++) {
-                var chunkNumbers = range.hymnNumbers.slice(ci * chunkSize, (ci + 1) * chunkSize);
-                if (!chunkNumbers.length) continue;
+            try {
+                for (var ci = 0; ci < totalChunks; ci++) {
+                    if (appState.batchStopRequested) break;
 
-                var chunkStart = parseInt(chunkNumbers[0], 10);
-                var chunkEnd = parseInt(chunkNumbers[chunkNumbers.length - 1], 10);
-                var commonOptions = {
-                    hymnNumbers: chunkNumbers,
-                    zipName: "새찬송가_" + String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "_" + type.toUpperCase() + ".zip",
-                    progressLabel: String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "장 " + type.toUpperCase() + " 생성중...",
-                    errorLabel: "범위 " + type.toUpperCase() + " 생성 오류",
-                    quality: quality,
-                    sharedState: sharedState,
-                    skipRestore: true,
-                    totalOverall: total,
-                    overallOffset: ci * chunkSize,
-                    chunkIndex: ci + 1,
-                    totalChunks: totalChunks
-                };
+                    var chunkNumbers = range.hymnNumbers.slice(ci * chunkSize, (ci + 1) * chunkSize);
+                    if (!chunkNumbers.length) continue;
 
-                if (type === 'ppt') {
-                    await makePptZipBatch(commonOptions);
-                } else {
-                    await makePngZipBatch(commonOptions);
+                    var chunkStart = parseInt(chunkNumbers[0], 10);
+                    var chunkEnd = parseInt(chunkNumbers[chunkNumbers.length - 1], 10);
+                    var commonOptions = {
+                        hymnNumbers: chunkNumbers,
+                        zipName: "새찬송가_" + String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "_" + type.toUpperCase() + ".zip",
+                        progressLabel: String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "장 " + type.toUpperCase() + " 생성중...",
+                        errorLabel: "범위 " + type.toUpperCase() + " 생성 오류",
+                        quality: quality,
+                        sharedState: sharedState,
+                        skipRestore: true,
+                        totalOverall: total,
+                        overallOffset: ci * chunkSize,
+                        chunkIndex: ci + 1,
+                        totalChunks: totalChunks
+                    };
+
+                    var chunkResult;
+                    if (type === 'ppt') {
+                        chunkResult = await makePptZipBatch(commonOptions);
+                    } else {
+                        chunkResult = await makePngZipBatch(commonOptions);
+                    }
+
+                    if ((chunkResult && chunkResult.stopped) || appState.batchStopRequested) {
+                        showBatchStatus(
+                            "배치 중지됨 · 묶음 " + (ci + 1) + "/" + totalChunks,
+                            "현재 묶음까지 저장을 마치고 종료했습니다."
+                        );
+                        break;
+                    }
+
+                    if (ci < totalChunks - 1) {
+                        $("#createCanvas").empty();
+                        await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+                        await new Promise(function(resolve) { requestAnimationFrame(resolve); });
+                        await pauseBetweenChunks(
+                            800,
+                            "묶음 " + (ci + 1) + "/" + totalChunks + " 완료",
+                            "다음 묶음 준비중... 브라우저 메모리 정리중"
+                        );
+                    }
                 }
-
-                if (ci < totalChunks - 1) {
-                    $("#createCanvas").empty();
-                    await new Promise(function(resolve) { requestAnimationFrame(resolve); });
-                    await new Promise(function(resolve) { requestAnimationFrame(resolve); });
-                    await pauseBetweenChunks(
-                        800,
-                        "묶음 " + (ci + 1) + "/" + totalChunks + " 완료",
-                        "다음 묶음 준비중... 브라우저 메모리 정리중"
-                    );
-                }
+            } finally {
+                await restoreFullUiState(sharedState);
+                appState.batchInProgress = false;
+                appState.batchStopRequested = false;
+                hideBatchStatus();
             }
-
-            await restoreFullUiState(sharedState);
-            hideBatchStatus();
         }
 
         async function makePptZipBatch(options) {
@@ -2094,6 +2145,8 @@
             var previousState = options.sharedState || captureCurrentUiState();
             var hymnNumbers = options.hymnNumbers || [];
             var zip = new JSZip();
+            var createdCount = 0;
+            var stopped = false;
 
             $('.ui.dimmer').dimmer('show');
             appState.suppressAutoStabilize = true;
@@ -2102,6 +2155,10 @@
 
             try {
                 for (var i = 0; i < hymnNumbers.length; i++) {
+                    if (appState.batchStopRequested && createdCount > 0) {
+                        stopped = true;
+                        break;
+                    }
                     var hymnNum = hymnNumbers[i];
                     setBatchProgressMessage(options, i, hymnNum, "PPT 생성중...");
 
@@ -2127,20 +2184,28 @@
                     try {
                         var blob = await pptx.write({ outputType: 'blob' });
                         zip.file(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + ".pptx", blob);
+                        createdCount++;
                     } finally {
                         revokePptImageUrls(pptx);
                     }
+
+                    if (appState.batchStopRequested) {
+                        stopped = true;
+                        break;
+                    }
                 }
 
-                $("#dimmerMsg").text("ZIP 파일 생성중...");
-                var zipBlob = await zip.generateAsync({ type: 'blob' });
-                var a = document.createElement('a');
-                a.href = URL.createObjectURL(zipBlob);
-                a.download = options.zipName || "hymn_ppt_batch.zip";
-                a.click();
-                URL.revokeObjectURL(a.href);
-                zipBlob = null;
-                zip = null;
+                if (createdCount > 0) {
+                    $("#dimmerMsg").text("ZIP 파일 생성중...");
+                    var zipBlob = await zip.generateAsync({ type: 'blob' });
+                    var a = document.createElement('a');
+                    a.href = URL.createObjectURL(zipBlob);
+                    a.download = options.zipName || "hymn_ppt_batch.zip";
+                    a.click();
+                    URL.revokeObjectURL(a.href);
+                    zipBlob = null;
+                    zip = null;
+                }
             } catch (err) {
                 alert((options.errorLabel || "PPT 일괄 생성 오류") + ": " + err);
             } finally {
@@ -2152,6 +2217,10 @@
                 }
                 if (!options.skipRestore) hideBatchStatus();
             }
+            return {
+                stopped: stopped,
+                createdCount: createdCount
+            };
         }
 
         async function makePngZipBatch(options) {
@@ -2163,6 +2232,8 @@
             var previousState = options.sharedState || captureCurrentUiState();
             var hymnNumbers = options.hymnNumbers || [];
             var zip = new JSZip();
+            var createdCount = 0;
+            var stopped = false;
 
             $('.ui.dimmer').dimmer('show');
             appState.suppressAutoStabilize = true;
@@ -2171,6 +2242,10 @@
 
             try {
                 for (var i = 0; i < hymnNumbers.length; i++) {
+                    if (appState.batchStopRequested && createdCount > 0) {
+                        stopped = true;
+                        break;
+                    }
                     var hymnNum = hymnNumbers[i];
                     setBatchProgressMessage(options, i, hymnNum, "PNG 생성중...");
 
@@ -2206,17 +2281,25 @@
                             : getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_page" + (pi + 1) + ".png";
                         hymnFolder.file(fileName, base64, { base64: true });
                     }
+                    createdCount++;
+
+                    if (appState.batchStopRequested) {
+                        stopped = true;
+                        break;
+                    }
                 }
 
-                $("#dimmerMsg").text("ZIP 파일 생성중...");
-                var zipBlob = await zip.generateAsync({ type: 'blob' });
-                var a = document.createElement('a');
-                a.href = URL.createObjectURL(zipBlob);
-                a.download = options.zipName || "hymn_png_batch.zip";
-                a.click();
-                URL.revokeObjectURL(a.href);
-                zipBlob = null;
-                zip = null;
+                if (createdCount > 0) {
+                    $("#dimmerMsg").text("ZIP 파일 생성중...");
+                    var zipBlob = await zip.generateAsync({ type: 'blob' });
+                    var a = document.createElement('a');
+                    a.href = URL.createObjectURL(zipBlob);
+                    a.download = options.zipName || "hymn_png_batch.zip";
+                    a.click();
+                    URL.revokeObjectURL(a.href);
+                    zipBlob = null;
+                    zip = null;
+                }
             } catch (err) {
                 alert((options.errorLabel || "PNG 일괄 생성 오류") + ": " + err);
             } finally {
@@ -2228,6 +2311,10 @@
                 }
                 if (!options.skipRestore) hideBatchStatus();
             }
+            return {
+                stopped: stopped,
+                createdCount: createdCount
+            };
         }
 
         function captureCurrentUiState() {
