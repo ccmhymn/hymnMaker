@@ -233,7 +233,7 @@
                     <div class="ten wide column">
                         <div class="ui header">
                             <i class="music icon"></i>
-                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 16:00 KST)
+                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 16:33 KST)
                         </div>
                     </div>
                     <div class="right aligned six wide column">
@@ -2058,7 +2058,7 @@
             await makeChunkedRangeZip(range, 'png', getSelectedExportQuality('batch'));
         }
 
-        function getBatchZipSaveMeta(options, createdCount) {
+        function getBatchZipSaveMeta(options, createdCount, savedNumbers) {
             if (!createdCount || !options || !options.hymnNumbers || !options.hymnNumbers.length) {
                 return {
                     zipName: options && options.zipName ? options.zipName : "hymn_batch.zip",
@@ -2066,8 +2066,9 @@
                 };
             }
 
-            var firstNum = parseInt(options.hymnNumbers[0], 10);
-            var lastNum = parseInt(options.hymnNumbers[Math.min(createdCount, options.hymnNumbers.length) - 1], 10);
+            var effectiveNumbers = (savedNumbers && savedNumbers.length) ? savedNumbers : options.hymnNumbers.slice(0, Math.min(createdCount, options.hymnNumbers.length));
+            var firstNum = parseInt(effectiveNumbers[0], 10);
+            var lastNum = parseInt(effectiveNumbers[effectiveNumbers.length - 1], 10);
             var typeLabel = (options.batchType || 'PPT').toUpperCase();
 
             if (isNaN(firstNum) || isNaN(lastNum)) {
@@ -2085,11 +2086,20 @@
             };
         }
 
+        function formatBatchFailureMessage(failedHymns) {
+            if (!failedHymns || !failedHymns.length) return "";
+            var unique = Array.from(new Set(failedHymns));
+            var preview = unique.slice(0, 20).join(', ');
+            var suffix = unique.length > 20 ? (" 외 " + (unique.length - 20) + "장") : "";
+            return "실패한 장: " + preview + suffix;
+        }
+
         async function makeChunkedRangeZip(range, type, quality) {
             var chunkSize = 50;
             var total = range.hymnNumbers.length;
             var totalChunks = Math.ceil(total / chunkSize);
             var sharedState = captureCurrentUiState();
+            var failedHymns = [];
 
             if (totalChunks > 1) {
                 var ok = confirm(
@@ -2138,6 +2148,9 @@
                     }
 
                     if ((chunkResult && chunkResult.stopped) || appState.batchStopRequested) {
+                        if (chunkResult && chunkResult.failedHymns && chunkResult.failedHymns.length) {
+                            failedHymns = failedHymns.concat(chunkResult.failedHymns);
+                        }
                         showBatchStatus(
                             "배치 중지됨 · 묶음 " + (ci + 1) + "/" + totalChunks,
                             (chunkResult && chunkResult.savedRangeLabel
@@ -2145,6 +2158,10 @@
                                 : "현재 묶음까지 저장을 마치고 종료했습니다.")
                         );
                         break;
+                    }
+
+                    if (chunkResult && chunkResult.failedHymns && chunkResult.failedHymns.length) {
+                        failedHymns = failedHymns.concat(chunkResult.failedHymns);
                     }
 
                     if (ci < totalChunks - 1) {
@@ -2163,6 +2180,9 @@
                 appState.batchInProgress = false;
                 appState.batchStopRequested = false;
                 hideBatchStatus();
+                if (failedHymns.length) {
+                    alert("일괄 생성은 계속 진행했고, 일부 장은 건너뛰었습니다.\n\n" + formatBatchFailureMessage(failedHymns));
+                }
             }
         }
 
@@ -2178,6 +2198,8 @@
             var createdCount = 0;
             var stopped = false;
             var savedRangeLabel = "";
+            var failedHymns = [];
+            var savedNumbers = [];
 
             $('.ui.dimmer').dimmer('show');
             appState.suppressAutoStabilize = true;
@@ -2193,31 +2215,40 @@
                     var hymnNum = hymnNumbers[i];
                     setBatchProgressMessage(options, i, hymnNum, "PPT 생성중...");
 
-                    setIniValue();
-                    restorePersistentUiOptions(previousState);
-                    await loadHymn(hymnNum);
-                    await waitForRenderStability();
-
-                    var canvPages = Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
-                        return el && el.isConnected;
-                    });
-                    if (!canvPages.length) throw new Error(hymnNum + "장 렌더링 페이지를 찾을 수 없습니다.");
-
-                    await changeXYposition();
-                    $(canvPages).each(function(index, item) {
-                        $(item).attr("id", "osmdCanvasPage" + (index + 1));
-                    });
-
-                    var pptx = await createPptxFromCanvPages(canvPages, {
-                        includeTabs: $("#exportIncludeTabs").is(':checked'),
-                        quality: options.quality || getSelectedExportQuality('batch')
-                    });
                     try {
-                        var blob = await pptx.write({ outputType: 'blob' });
-                        zip.file(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + ".pptx", blob);
-                        createdCount++;
-                    } finally {
-                        revokePptImageUrls(pptx);
+                        setIniValue();
+                        restorePersistentUiOptions(previousState);
+                        await loadHymn(hymnNum);
+                        await waitForRenderStability();
+
+                        var canvPages = await getRenderedPagesWithRetry(hymnNum + "장");
+
+                        await changeXYposition();
+                        $(canvPages).each(function(index, item) {
+                            $(item).attr("id", "osmdCanvasPage" + (index + 1));
+                        });
+
+                        var pptx = await createPptxFromCanvPages(canvPages, {
+                            includeTabs: $("#exportIncludeTabs").is(':checked'),
+                            quality: options.quality || getSelectedExportQuality('batch')
+                        });
+                        try {
+                            var blob = await pptx.write({ outputType: 'blob' });
+                            zip.file(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + ".pptx", blob);
+                            createdCount++;
+                            savedNumbers.push(hymnNum);
+                        } finally {
+                            revokePptImageUrls(pptx);
+                        }
+                    } catch (itemErr) {
+                        console.error('[hymnMaker] 배치 PPT 건너뜀:', hymnNum, itemErr);
+                        failedHymns.push(hymnNum);
+                        showBatchStatus(
+                            $("#batchStatusPrimary").text() || "배치 진행중",
+                            hymnNum + "장 오류로 건너뜀 · 다음 장 계속 진행"
+                        );
+                        await new Promise(function(resolve) { setTimeout(resolve, 250); });
+                        continue;
                     }
 
                     if (appState.batchStopRequested) {
@@ -2228,7 +2259,7 @@
 
                 if (createdCount > 0) {
                     $("#dimmerMsg").text("ZIP 파일 생성중...");
-                    var zipMeta = getBatchZipSaveMeta(options, createdCount);
+                    var zipMeta = getBatchZipSaveMeta(options, createdCount, savedNumbers);
                     savedRangeLabel = zipMeta.rangeLabel;
                     var zipBlob = await zip.generateAsync({ type: 'blob' });
                     var a = document.createElement('a');
@@ -2253,7 +2284,8 @@
             return {
                 stopped: stopped,
                 createdCount: createdCount,
-                savedRangeLabel: savedRangeLabel
+                savedRangeLabel: savedRangeLabel,
+                failedHymns: failedHymns
             };
         }
 
@@ -2269,6 +2301,8 @@
             var createdCount = 0;
             var stopped = false;
             var savedRangeLabel = "";
+            var failedHymns = [];
+            var savedNumbers = [];
 
             $('.ui.dimmer').dimmer('show');
             appState.suppressAutoStabilize = true;
@@ -2284,39 +2318,48 @@
                     var hymnNum = hymnNumbers[i];
                     setBatchProgressMessage(options, i, hymnNum, "PNG 생성중...");
 
-                    setIniValue();
-                    restorePersistentUiOptions(previousState);
-                    await loadHymn(hymnNum);
-                    await waitForRenderStability();
+                    try {
+                        setIniValue();
+                        restorePersistentUiOptions(previousState);
+                        await loadHymn(hymnNum);
+                        await waitForRenderStability();
 
-                    var canvPages = Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
-                        return el && el.isConnected;
-                    });
-                    if (!canvPages.length) throw new Error(hymnNum + "장 렌더링 페이지를 찾을 수 없습니다.");
+                        var canvPages = await getRenderedPagesWithRetry(hymnNum + "장");
 
-                    await changeXYposition();
-                    $(canvPages).each(function(index, item) {
-                        $(item).attr("id", "osmdCanvasPage" + (index + 1));
-                    });
-
-                    var hymnFolder = zip.folder(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')));
-                    for (var pi = 0; pi < canvPages.length; pi++) {
-                        $("#dimmerMsg").text((i + 1) + "/" + hymnNumbers.length + " " + getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + " PNG 생성중...");
-                        var imgUri = await getImgUri(canvPages[pi], {
-                            includeTitle: true,
-                            includeTabs: $("#exportIncludeTabs").is(':checked'),
-                            includeConfiguredBackground: true,
-                            quality: options.quality || getSelectedExportQuality('batch')
+                        await changeXYposition();
+                        $(canvPages).each(function(index, item) {
+                            $(item).attr("id", "osmdCanvasPage" + (index + 1));
                         });
-                        var base64 = imgUri.split(',')[1];
-                        var parentId = $(canvPages[pi]).parent().attr("id") || "";
-                        var verseNum = parseInt(parentId.replace(/[^0-9]/g, ''), 10) || 0;
-                        var fileName = verseNum
-                            ? getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_verse" + verseNum + "_page" + (pi + 1) + ".png"
-                            : getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_page" + (pi + 1) + ".png";
-                        hymnFolder.file(fileName, base64, { base64: true });
+
+                        var hymnFolder = zip.folder(getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')));
+                        for (var pi = 0; pi < canvPages.length; pi++) {
+                            $("#dimmerMsg").text((i + 1) + "/" + hymnNumbers.length + " " + getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + " PNG 생성중...");
+                            var imgUri = await getImgUri(canvPages[pi], {
+                                includeTitle: true,
+                                includeTabs: $("#exportIncludeTabs").is(':checked'),
+                                includeConfiguredBackground: true,
+                                quality: options.quality || getSelectedExportQuality('batch')
+                            });
+                            var base64 = imgUri.split(',')[1];
+                            var parentId = $(canvPages[pi]).parent().attr("id") || "";
+                            var verseNum = parseInt(parentId.replace(/[^0-9]/g, ''), 10) || 0;
+                            var fileName = verseNum
+                                ? getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_verse" + verseNum + "_page" + (pi + 1) + ".png"
+                                : getSafeBaseFileName(options.quality || getSelectedExportQuality('batch')) + "_page" + (pi + 1) + ".png";
+                            hymnFolder.file(fileName, base64, { base64: true });
+                        }
+                        createdCount++;
+                        savedNumbers.push(hymnNum);
+                    } catch (itemErr) {
+                        console.error('[hymnMaker] 배치 PNG 건너뜀:', hymnNum, itemErr);
+                        failedHymns.push(hymnNum);
+                        showBatchStatus(
+                            $("#batchStatusPrimary").text() || "배치 진행중",
+                            hymnNum + "장 오류로 건너뜀 · 다음 장 계속 진행"
+                        );
+                        await new Promise(function(resolve) { setTimeout(resolve, 250); });
+                        continue;
                     }
-                    createdCount++;
 
                     if (appState.batchStopRequested) {
                         stopped = true;
@@ -2326,7 +2369,7 @@
 
                 if (createdCount > 0) {
                     $("#dimmerMsg").text("ZIP 파일 생성중...");
-                    var zipMeta = getBatchZipSaveMeta(options, createdCount);
+                    var zipMeta = getBatchZipSaveMeta(options, createdCount, savedNumbers);
                     savedRangeLabel = zipMeta.rangeLabel;
                     var zipBlob = await zip.generateAsync({ type: 'blob' });
                     var a = document.createElement('a');
@@ -2351,7 +2394,8 @@
             return {
                 stopped: stopped,
                 createdCount: createdCount,
-                savedRangeLabel: savedRangeLabel
+                savedRangeLabel: savedRangeLabel,
+                failedHymns: failedHymns
             };
         }
 
@@ -2901,6 +2945,35 @@
             return base;
         }
 
+        function collectRenderedPages() {
+            return Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
+                return el && el.isConnected;
+            });
+        }
+
+        async function getRenderedPagesWithRetry(contextLabel) {
+            var renderedPages = collectRenderedPages();
+            if (renderedPages.length) return renderedPages;
+
+            console.warn('[hymnMaker] 렌더 페이지 재시도 1회:', contextLabel || appState.currentHymnNum || '');
+            await waitForRenderStability();
+            renderedPages = collectRenderedPages();
+            if (renderedPages.length) return renderedPages;
+
+            if (appState.currentXmlData && appState.countLyrics) {
+                console.warn('[hymnMaker] 렌더 페이지 재시도 2회(재렌더):', contextLabel || appState.currentHymnNum || '');
+                await rerenderSelectedVerses();
+                await waitForRenderStability();
+                renderedPages = collectRenderedPages();
+            }
+
+            if (!renderedPages.length) {
+                throw new Error((contextLabel || "현재 곡") + " 렌더링 페이지를 찾을 수 없습니다.");
+            }
+
+            return renderedPages;
+        }
+
         async function withExportRenderWithoutMeasureNumbers(task) {
             var previousShowMeasureNumbers = appState.showMeasureNumbers;
             var previousSuppressAutoStabilize = appState.suppressAutoStabilize;
@@ -2913,12 +2986,7 @@
                     await waitForRenderStability();
                 }
 
-                var renderedPages = Array.from($('div[id^="osmdCanvasPage"]')).filter(function(el) {
-                    return el && el.isConnected;
-                });
-                if (!renderedPages.length) {
-                    throw new Error("캡처 가능한 렌더링 페이지를 찾을 수 없습니다.");
-                }
+                var renderedPages = await getRenderedPagesWithRetry("캡처 가능한");
 
                 return await task(renderedPages);
             } finally {
