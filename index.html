@@ -233,7 +233,7 @@
                     <div class="ten wide column">
                         <div class="ui header">
                             <i class="music icon"></i>
-                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 15:52 KST)
+                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-03-27 16:00 KST)
                         </div>
                     </div>
                     <div class="right aligned six wide column">
@@ -2058,6 +2058,33 @@
             await makeChunkedRangeZip(range, 'png', getSelectedExportQuality('batch'));
         }
 
+        function getBatchZipSaveMeta(options, createdCount) {
+            if (!createdCount || !options || !options.hymnNumbers || !options.hymnNumbers.length) {
+                return {
+                    zipName: options && options.zipName ? options.zipName : "hymn_batch.zip",
+                    rangeLabel: ""
+                };
+            }
+
+            var firstNum = parseInt(options.hymnNumbers[0], 10);
+            var lastNum = parseInt(options.hymnNumbers[Math.min(createdCount, options.hymnNumbers.length) - 1], 10);
+            var typeLabel = (options.batchType || 'PPT').toUpperCase();
+
+            if (isNaN(firstNum) || isNaN(lastNum)) {
+                return {
+                    zipName: options.zipName || ("hymn_batch_" + typeLabel + ".zip"),
+                    rangeLabel: ""
+                };
+            }
+
+            var paddedFirst = String(firstNum).padStart(3, '0');
+            var paddedLast = String(lastNum).padStart(3, '0');
+            return {
+                zipName: "새찬송가_" + paddedFirst + "-" + paddedLast + "_" + typeLabel + ".zip",
+                rangeLabel: paddedFirst + "-" + paddedLast
+            };
+        }
+
         async function makeChunkedRangeZip(range, type, quality) {
             var chunkSize = 50;
             var total = range.hymnNumbers.length;
@@ -2091,6 +2118,7 @@
                     var commonOptions = {
                         hymnNumbers: chunkNumbers,
                         zipName: "새찬송가_" + String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "_" + type.toUpperCase() + ".zip",
+                        batchType: type,
                         progressLabel: String(chunkStart).padStart(3, '0') + "-" + String(chunkEnd).padStart(3, '0') + "장 " + type.toUpperCase() + " 생성중...",
                         errorLabel: "범위 " + type.toUpperCase() + " 생성 오류",
                         quality: quality,
@@ -2112,7 +2140,9 @@
                     if ((chunkResult && chunkResult.stopped) || appState.batchStopRequested) {
                         showBatchStatus(
                             "배치 중지됨 · 묶음 " + (ci + 1) + "/" + totalChunks,
-                            "현재 묶음까지 저장을 마치고 종료했습니다."
+                            (chunkResult && chunkResult.savedRangeLabel
+                                ? chunkResult.savedRangeLabel + "까지 저장을 마치고 종료했습니다."
+                                : "현재 묶음까지 저장을 마치고 종료했습니다.")
                         );
                         break;
                     }
@@ -2147,6 +2177,7 @@
             var zip = new JSZip();
             var createdCount = 0;
             var stopped = false;
+            var savedRangeLabel = "";
 
             $('.ui.dimmer').dimmer('show');
             appState.suppressAutoStabilize = true;
@@ -2197,10 +2228,12 @@
 
                 if (createdCount > 0) {
                     $("#dimmerMsg").text("ZIP 파일 생성중...");
+                    var zipMeta = getBatchZipSaveMeta(options, createdCount);
+                    savedRangeLabel = zipMeta.rangeLabel;
                     var zipBlob = await zip.generateAsync({ type: 'blob' });
                     var a = document.createElement('a');
                     a.href = URL.createObjectURL(zipBlob);
-                    a.download = options.zipName || "hymn_ppt_batch.zip";
+                    a.download = zipMeta.zipName;
                     a.click();
                     URL.revokeObjectURL(a.href);
                     zipBlob = null;
@@ -2219,7 +2252,8 @@
             }
             return {
                 stopped: stopped,
-                createdCount: createdCount
+                createdCount: createdCount,
+                savedRangeLabel: savedRangeLabel
             };
         }
 
@@ -2234,6 +2268,7 @@
             var zip = new JSZip();
             var createdCount = 0;
             var stopped = false;
+            var savedRangeLabel = "";
 
             $('.ui.dimmer').dimmer('show');
             appState.suppressAutoStabilize = true;
@@ -2291,10 +2326,12 @@
 
                 if (createdCount > 0) {
                     $("#dimmerMsg").text("ZIP 파일 생성중...");
+                    var zipMeta = getBatchZipSaveMeta(options, createdCount);
+                    savedRangeLabel = zipMeta.rangeLabel;
                     var zipBlob = await zip.generateAsync({ type: 'blob' });
                     var a = document.createElement('a');
                     a.href = URL.createObjectURL(zipBlob);
-                    a.download = options.zipName || "hymn_png_batch.zip";
+                    a.download = zipMeta.zipName;
                     a.click();
                     URL.revokeObjectURL(a.href);
                     zipBlob = null;
@@ -2313,7 +2350,8 @@
             }
             return {
                 stopped: stopped,
-                createdCount: createdCount
+                createdCount: createdCount,
+                savedRangeLabel: savedRangeLabel
             };
         }
 
