@@ -233,7 +233,7 @@
                     <div class="ten wide column">
                         <div class="ui header">
                             <i class="music icon"></i>
-                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-04-09 09:53 KST)
+                            새찬송가 PPT 자동 생성 1.0 (최종 업데이트: 2026-04-09 11:08 KST)
                         </div>
                     </div>
                     <div class="right aligned six wide column">
@@ -985,6 +985,7 @@
             return (line || '')
                 .replace(/^후렴\s*[:：.]?\s*/i, '')
                 .replace(/아\s+멘/g, '아멘')
+                .replace(/[\[\]]+/g, '')
                 .replace(/(^|\s)[\-‐‑‒–—―]+\s*(?=[가-힣A-Za-z])/g, '$1')
                 .replace(/\s+/g, ' ')
                 .trim();
