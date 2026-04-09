@@ -1079,7 +1079,7 @@
 
         async function getLyricsDownloadText(selectedVerses, hymnNumOverride) {
             var hymnNum = hymnNumOverride || appState.currentHymnNum;
-            var txtContent = await fetchTextFile('./찬송가-가사TXT(업데이트)/' + hymnNum + '.txt');
+            var txtContent = await fetchTextFile('./lyrics-txt/' + hymnNum + '.txt');
             return txtContent
                 ? buildLyricsTextFromTxt(txtContent, selectedVerses)
                 : buildLyricsTextFromXml(selectedVerses);
@@ -1275,7 +1275,7 @@
 
         // TXT 파일 로드 → 서브줄 계산 → breaks 반환 (실패시 null)
         async function computeTxtLineBreaks(xmlData, hymnNum) {
-            var txtContent = await fetchTextFile('./찬송가-가사TXT(업데이트)/' + hymnNum + '.txt');
+            var txtContent = await fetchTextFile('./lyrics-txt/' + hymnNum + '.txt');
             if (!txtContent) return null;
 
             var verses = parseTxtVerses(txtContent);
